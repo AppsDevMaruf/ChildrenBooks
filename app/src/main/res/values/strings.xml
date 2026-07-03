@@ -1,0 +1,153 @@
+<resources>
+    <string name="open">open</string>
+    <string name="close">close</string>
+
+    //toolbar Titel
+
+    <string name="tbAlphabet">Alphabet</string>
+    <string name="tbAnimals">Animals</string>
+
+
+    <string name="app_name">Children Books</string>
+    <string name="AaText">A is for Apple</string>
+    <string name="BbText">B is for Bee </string>
+    <string name="CcText">C is for Cat</string>
+    <string name="DdText">D is for Drum</string>
+    <string name="EeText">E is for Egg</string>
+    <string name="FfText">F is for Fish</string>
+    <string name="GgText">G is for Gloves</string>
+    <string name="HhText">H is for House</string>
+    <string name="IiText">I is for Ice House</string>
+    <string name="JjText">J is for Jar</string>
+    <string name="KkText">K is for Key</string>
+    <string name="LlText">L is for Lock</string>
+    <string name="MmText">M is for Mug</string>
+    <string name="NnText">N is for Net</string>
+    <string name="OoText">O is for Orange</string>
+    <string name="PpText">P is for Pumpkin</string>
+    <string name="QqText">Q is for Queen</string>
+    <string name="RrText">R is for Robot</string>
+    <string name="SsText">S is for Snake</string>
+    <string name="TtText">T is for Tiger</string>
+    <string name="UuText">U is for Umbrella</string>
+    <string name="VvText">V is for Virus</string>
+    <string name="WwText">W is for Watch</string>
+    <string name="XxText">X is for Xylophone</string>
+    <string name="YyText">Y is for Yo Yo</string>
+    <string name="ZzText">Z is for ZIPPER</string>
+    //word
+    <string name="Axe">Axe</string>
+    <string name="Ant">Ant</string>
+    <string name="Bat">Bat</string>
+    <string name="Box">Box</string>
+    <string name="Cap">Cap</string>
+    <string name="Cup">Cup</string>
+    <string name="Dog">Dog</string>
+    <string name="Doll">Doll</string>
+    <string name="Ear">Ear</string>
+    <string name="Eye">Eye</string>
+    <string name="Fan">Fan</string>
+    <string name="Fox">Fox</string>
+    <string name="Girl">Girl</string>
+    <string name="Goat">Goat</string>
+    <string name="Hut">Hut</string>
+    <string name="Hat">Hat</string>
+    <string name="Ink">Ink</string>
+    <string name="Ice">Ice</string>
+    <string name="Jar">Jug</string>
+    <string name="Jeep">Jeep</string>
+    <string name="Kite">Kite</string>
+    <string name="Knife">Knife</string>
+    <string name="Leg">Leg</string>
+    <string name="Lion">Lion</string>
+    <string name="Man">Man</string>
+    <string name="Map">Map</string>
+    <string name="Nose">Nose</string>
+    <string name="Nut">Nut</string>
+    <string name="Ox">Ox</string>
+    <string name="Onion">Onion</string>
+    <string name="Pot">Pot</string>
+    <string name="Pen">Pen</string>
+    <string name="Quiz">Quiz</string>
+    <string name="Quill">Quill</string>
+    <string name="Rain">Rain</string>
+    <string name="Run">Run</string>
+    <string name="Sun">Sun</string>
+    <string name="Star">Star</string>
+    <string name="Tree">Tree</string>
+    <string name="Table">Table</string>
+    <string name="Uniform">Uniform</string>
+    <string name="Uncle">Uncle</string>
+    <string name="Van">Van</string>
+    <string name="Violin">Violin</string>
+    <string name="Window">Window</string>
+    <string name="Win">Win</string>
+    <string name="Xray">X-ray</string>
+    <string name="Xmas">X-mas</string>
+    <string name="Young">Yak</string>
+    <string name="Yarn">Yarn</string>
+    <string name="Zoo">Zoo</string>
+    <string name="Zero">Zero</string>
+
+    <string name="work_on_going">Work On Going…</string>
+    <string name="maruf_alam">Maruf Alam</string>
+    <string name="android_developer">Android Developer</string>
+    <string name="waiting_for_next_update">Waiting For Next Update</string>
+    <string name="item_name">Item Name</string>
+    <string name="todo">TODO</string>
+    //days
+    // months
+    <string name="January">January</string>
+    <string name="February">February</string>
+    <string name="March">March</string>
+    <string name="April">April</string>
+    <string name="May">May</string>
+    <string name="June">June</string>
+    <string name="July">July</string>
+    <string name="August">August</string>
+    <string name="September">September</string>
+    <string name="October">October</string>
+    <string name="November">November</string>
+    <string name="December">December</string>
+    //Seasons
+    <string name="summer">Summer</string>
+    <string name="rainy">Rainy Season</string>
+    <string name="autumn">Autumn</string>
+    <string name="lateautumn">Late Autumn</string>
+    <string name="winter">Winter</string>
+    <string name="spring">Spring</string>
+    <string name="www_marufalam_com">www.marufalam.com</string>
+    <string name="location">Location</string>
+    <string name="children">Children</string>
+    <string name="books">Books</string>
+    //Number in Word
+    <string name="zero">zero</string>
+    <string name="one">one</string>
+    <string name="two">two</string>
+    <string name="three">three</string>
+    <string name="four">four</string>
+    <string name="five">five</string>
+    <string name="six">six</string>
+    <string name="seven">seven</string>
+    <string name="eight">eight</string>
+    <string name="nine">nine</string>
+    <string name="ten">ten</string>
+    <string name="eleven">eleven</string>
+    <string name="twelve">twelve</string>
+    <string name="thirteen">thirteen</string>
+    <string name="fourteen">fourteen</string>
+    <string name="fifteen">fifteen</string>
+    <string name="sixteen">sixteen</string>
+    <string name="seventeen">seventeen</string>
+    <string name="eighteen">eighteen</string>
+    <string name="nineteen">nineteen</string>
+    <string name="twenty">twenty</string>
+    <string name="in_word">In Word</string>
+    <string name="writing_your_suggestions_about_this_app">Writing your suggestions about this app</string>
+    <string name="your_suggestion">Your Suggestion</string>
+    <string name="moja">moja</string>
+    <string name="website">Website</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
+
+</resources>

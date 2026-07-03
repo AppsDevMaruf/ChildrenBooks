@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Activites.MainActivity">
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+
+        android:id="@+id/drawerId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context=".Activites.MainActivity"
+        tools:openDrawer="start">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#2196F3">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@layout/side_item_model" />
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:background="@color/white">
+
+
+                        <FrameLayout
+                            android:id="@+id/container"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <!--<com.google.android.gms.ads.AdView
+                            xmlns:ads="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/adView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            ads:adSize="BANNER"
+                            ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+                        </com.google.android.gms.ads.AdView>-->
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nevViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/toplay"
+            app:menu="@menu/drawer_menu"
+            tools:ignore="NotSibling" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <include
+
+        android:id="@+id/mytoolbar"
+        layout="@layout/toolbar_layout" />
+
+</RelativeLayout>

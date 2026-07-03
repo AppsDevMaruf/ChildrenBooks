@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+    <item
+        android:id="@+id/homeId"
+        android:checked="true"
+        android:icon="@drawable/ic_house"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/moreApps"
+        android:checked="true"
+        android:icon="@drawable/ic_menu"
+        android:title="More Apps" />
+    </group>
+    <item
+        android:id="@+id/ppolicyId"
+        android:checked="true"
+        android:icon="@drawable/ic_compliant"
+        android:title="Privacy Policy" />
+    <item
+        android:id="@+id/ratingId"
+        android:checked="true"
+        android:icon="@drawable/ic_rating"
+        android:title="Rate This Apps" />
+
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/shareId"
+                android:checked="true"
+                android:icon="@drawable/ic_collaboration"
+                android:title="Share"/>
+
+            <item
+                android:id="@+id/mailId"
+                android:checked="true"
+                android:icon="@drawable/ic_gmail"
+                android:title="Email" />
+            <item
+                android:id="@+id/suggestionId"
+                android:checked="true"
+                android:icon="@drawable/ic_idea"
+                android:title="@string/your_suggestion" />
+
+                    </menu>
+    </item>
+
+
+</menu>
