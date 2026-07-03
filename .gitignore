@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+*.jks
+*.keystore
+*.aab
+*.apk
+app/google-services.json
+keystore_upload.png
