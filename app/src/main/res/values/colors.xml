@@ -6,7 +6,14 @@
     <color name="blackshedo">#273036</color>
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#ffd700</color>
-    <color name="bluelight">#0099ff</color>
+    <color name="bluelight">#086AD8</color>
+    <color name="brand_primary">#086AD8</color>
+    <color name="brand_primary_dark">#064FA3</color>
+    <color name="brand_secondary">#FFB020</color>
+    <color name="brand_background">#F7FAFF</color>
+    <color name="brand_surface">#FFFFFFFF</color>
+    <color name="brand_text_primary">#101828</color>
+    <color name="brand_text_secondary">#475467</color>
     //apple color
 
     //rainbow

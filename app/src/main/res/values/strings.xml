@@ -89,12 +89,8 @@
     <string name="Zoo">Zoo</string>
     <string name="Zero">Zero</string>
 
-    <string name="work_on_going">Work On Going…</string>
     <string name="maruf_alam">Maruf Alam</string>
     <string name="android_developer">Android Developer</string>
-    <string name="waiting_for_next_update">Waiting For Next Update</string>
-    <string name="item_name">Item Name</string>
-    <string name="todo">TODO</string>
     //days
     // months
     <string name="January">January</string>
@@ -149,5 +145,74 @@
     <string name="website">Website</string>
     <string name="about">About</string>
     <string name="exit">Exit</string>
+
+    <!-- Shared app navigation and actions -->
+    <string name="nav_home">Home</string>
+    <string name="nav_lessons">Lessons</string>
+    <string name="nav_play">Play</string>
+    <string name="nav_listen">Listen</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_mini_games">Mini-Games</string>
+    <string name="nav_listen_enjoy">Listen &amp; Enjoy</string>
+    <string name="drawer_more_apps">More apps</string>
+    <string name="drawer_privacy_policy">Privacy policy</string>
+    <string name="drawer_rate_this_app">Rate this app</string>
+    <string name="drawer_share">Share</string>
+    <string name="drawer_email">Email</string>
+    <string name="settings_subtitle">Manage app links, feedback, sharing and developer contact.</string>
+    <string name="developer_name">Maruf Alam</string>
+    <string name="developer_role">Android Developer</string>
+    <string name="developer_facebook">Facebook</string>
+    <string name="action_previous">Previous</string>
+    <string name="action_next">Next</string>
+    <string name="action_close">Close</string>
+
+    <!-- Home -->
+    <string name="home_category_abc_letters">ABC Letters</string>
+    <string name="home_category_numbers">Numbers</string>
+    <string name="home_category_days">7 Days</string>
+    <string name="home_category_months">12 Months</string>
+    <string name="home_category_seasons">6 Seasons</string>
+    <string name="home_category_rainbow">Rainbow</string>
+    <string name="home_category_animals">Animals</string>
+    <string name="home_category_fishes">Fishes</string>
+    <string name="home_category_birds">Birds</string>
+    <string name="home_category_flowers">Flowers</string>
+    <string name="home_category_foods">Foods</string>
+    <string name="home_category_fruits">Fruits</string>
+    <string name="home_category_vegetables">Vegetables</string>
+    <string name="home_category_furniture">Furniture</string>
+    <string name="home_category_shapes">Shapes</string>
+    <string name="home_category_play_learn">Play &amp; Learn</string>
+    <string name="home_section_learning">Learning</string>
+    <string name="home_view_all">View all</string>
+    <string name="home_search_title">Search lessons</string>
+    <string name="home_search_hint">Type ABC, Animals, Listen…</string>
+
+    <!-- Lesson details -->
+    <string name="lesson_title_alphabet">Alphabet</string>
+    <string name="lesson_title_numbers">Numbers</string>
+    <string name="lesson_progress_format">%1$s • %2$d of %3$d</string>
+    <string name="lesson_swipe_instruction">Swipe left or right to explore</string>
+    <string name="alphabet_listen_to_letter">Listen to %1$s</string>
+    <string name="alphabet_lowercase_letter">Lowercase %1$s</string>
+    <string name="alphabet_is_for"> is for </string>
+    <string name="alphabet_tap_me">Tap\nme!</string>
+    <string name="number_listen_to_number">Listen to %1$s</string>
+    <string name="number_count_label">Count %1$s</string>
+    <string name="number_word_label"> is %1$s</string>
+    <string name="alphabet_grid_letter_format">%1$s letter</string>
+    <string name="route_rainbow_colours">Rainbow Colours</string>
+    <string name="game_trace_letter">Trace Letter</string>
+    <string name="game_letter_match">Letter Match</string>
+    <string name="game_object_letter">Apple → A</string>
+    <string name="game_drag_drop">Drag &amp; Drop</string>
+    <string name="game_quiz_mode">Quiz Mode</string>
+    <string name="game_find_object">Find Object</string>
+    <string name="game_number_match">Number Match</string>
+    <string name="game_color_match">Color Match</string>
+    <string name="game_memory_match">Memory Match</string>
+    <string name="toast_no_compatible_app">No compatible app found</string>
+    <string name="share_children_books">Share Children Books</string>
 
 </resources>

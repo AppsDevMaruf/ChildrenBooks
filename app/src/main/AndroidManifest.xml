@@ -1,58 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.marufalam.childrenbooks">
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
-        android:name=".OfflineFirebase"
-        android:allowBackup="true"
-        android:hardwareAccelerated="false"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ChildrenBooks">
-        <service
-            android:name=".MyService"
-            android:enabled="true"
-            android:exported="false">
-
-        </service>
-
         <activity
-            android:name=".Activites.SplashActivity"
-            android:screenOrientation="portrait"
-            android:exported="true">
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ChildrenBooks.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Activites.Aboutme"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".MyPager.FragActivity"
-            android:screenOrientation="portrait" />
-        <activity
-
-            android:name=".Activites.MainActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".MyPager.NumFragActivity"
-            android:screenOrientation="portrait" />
-
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713" />
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
