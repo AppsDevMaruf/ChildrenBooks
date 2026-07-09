@@ -1,21 +1,62 @@
+# Existing and new Gradle files
+.gradle/
+/build/
+/*/build/
+.kotlin/
+
+# IDE files (Existing and improved)
+.idea/
 *.iml
-.gradle
-/local.properties
+*.ipr
+*.iws
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+out/
+captures/
+.externalNativeBuild/
+.cxx/
+.navigation/
+
+# OS X and Windows
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+Thumbs.db
+
+# Local configuration files (Very Important)
 local.properties
+/local.properties
+secrets.properties
+
+# Signing files (Existing and added new formats)
 *.jks
 *.keystore
-*.aab
-*.apk
-app/google-services.json
+*.p12
+*.pem
+/app/release/
+/upload_certificate.pem
 keystore_upload.png
+
+# Android App Bundle / APKs
+*.apk
+*.ap_
+*.aab
+*.dex
+
+# Firebase / Google Services
+google-services.json
+app/google-services.json
+
+# Log and Report files
+*.log
+/build/reports/
+/app/build/reports/
+**/build/outputs/lint-results-*
+**/build/outputs/mapping/
+
+# Miscellaneous
+*.bak
+*.class
+.mtj.tmp/
