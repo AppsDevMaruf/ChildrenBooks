@@ -1,5 +1,6 @@
 # Existing and new Gradle files
 .gradle/
+.gradle-user-home/
 /build/
 /*/build/
 .kotlin/
@@ -29,6 +30,7 @@ Thumbs.db
 local.properties
 /local.properties
 secrets.properties
+keystore.properties
 
 # Signing files (Existing and added new formats)
 *.jks
@@ -60,3 +62,7 @@ app/google-services.json
 *.bak
 *.class
 .mtj.tmp/
+node_modules/
+
+# Goldie-generated Play Store assets
+/goldie/out/

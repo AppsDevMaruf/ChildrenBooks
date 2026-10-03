@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "goldie": "^0.3.0"
+  }
+}

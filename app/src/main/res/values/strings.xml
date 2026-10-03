@@ -89,7 +89,6 @@
     <string name="Zoo">Zoo</string>
     <string name="Zero">Zero</string>
 
-    <string name="maruf_alam">Maruf Alam</string>
     <string name="android_developer">Android Developer</string>
     //days
     // months
@@ -112,7 +111,6 @@
     <string name="lateautumn">Late Autumn</string>
     <string name="winter">Winter</string>
     <string name="spring">Spring</string>
-    <string name="www_marufalam_com">www.marufalam.com</string>
     <string name="location">Location</string>
     <string name="children">Children</string>
     <string name="books">Books</string>
@@ -139,10 +137,7 @@
     <string name="nineteen">nineteen</string>
     <string name="twenty">twenty</string>
     <string name="in_word">In Word</string>
-    <string name="writing_your_suggestions_about_this_app">Writing your suggestions about this app</string>
-    <string name="your_suggestion">Your Suggestion</string>
     <string name="moja">moja</string>
-    <string name="website">Website</string>
     <string name="about">About</string>
     <string name="exit">Exit</string>
 
@@ -158,14 +153,22 @@
     <string name="drawer_privacy_policy">Privacy policy</string>
     <string name="drawer_rate_this_app">Rate this app</string>
     <string name="drawer_share">Share</string>
-    <string name="drawer_email">Email</string>
-    <string name="settings_subtitle">Manage app links, feedback, sharing and developer contact.</string>
-    <string name="developer_name">Maruf Alam</string>
-    <string name="developer_role">Android Developer</string>
-    <string name="developer_facebook">Facebook</string>
+    <string name="settings_subtitle">Manage privacy, sharing and rating.</string>
     <string name="action_previous">Previous</string>
     <string name="action_next">Next</string>
     <string name="action_close">Close</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="parent_gate_title">Parent check</string>
+    <string name="parent_gate_question">What is 7 + 2?</string>
+    <string name="parent_gate_message">A grown-up should approve links, sharing, email and store actions.</string>
+    <string name="parent_gate_continue">Continue</string>
+    <string name="privacy_safety_title">Privacy &amp; Safety</string>
+    <string name="privacy_safety_subtitle">Designed for kids, with parent-approved outside links.</string>
+    <string name="privacy_safety_no_ads">No ads or analytics SDKs are included in this app build.</string>
+    <string name="privacy_safety_no_tracking">The app does not ask for account details, location, contacts, camera or microphone permission.</string>
+    <string name="privacy_safety_parent_gate">External links, sharing and rating actions require a parent check before leaving the app.</string>
+    <string name="privacy_safety_external_links">Text-to-speech may use the device speech engine, and full policy links open outside the app after parent approval.</string>
+    <string name="privacy_open_full_policy">Open full privacy policy</string>
 
     <!-- Home -->
     <string name="home_category_abc_letters">ABC Letters</string>
@@ -212,6 +215,10 @@
     <string name="game_number_match">Number Match</string>
     <string name="game_color_match">Color Match</string>
     <string name="game_memory_match">Memory Match</string>
+    <string name="game_picture_match">Picture Match</string>
+    <string name="game_guess_word">Guess the Word</string>
+    <string name="game_word_lock">Word Lock</string>
+    <string name="game_word_puzzle">Word Puzzle</string>
     <string name="toast_no_compatible_app">No compatible app found</string>
     <string name="share_children_books">Share Children Books</string>
 

@@ -1,0 +1,18 @@
+steps:
+  - echo: Open playful learning games
+  - launch: com.childrenbooks
+  - tool: await-ui-element
+    args:
+      condition: visible
+      selector:
+        text: Learning
+      timeoutMs: 10000
+  - tap:
+      x: 0.5
+      y: 0.949
+  - tool: await-ui-element
+    args:
+      condition: visible
+      selector:
+        text: Fun Activities
+      timeoutMs: 10000

@@ -1,0 +1,8 @@
+{
+  "background": "linear-gradient(160deg, #E6F5FF 0%, #FFFFFF 52%, #F3EEFF 100%)",
+  "frame": "17-pro-blue",
+  "fontFamily": "\"Noto Sans SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+  "template": "dynamic",
+  "layout": "classic",
+  "screenOnly": false
+}

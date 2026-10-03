@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.marufalam.childrenbooks" />
-                  <option name="mobileSdkAppId" value="1:149662494527:android:4beb58270edaba4b012d8a" />
-                  <option name="projectId" value="children-books-94aba" />
-                  <option name="projectNumber" value="149662494527" />
+                  <option name="appId" value="PLACEHOLDER" />
+                  <option name="mobileSdkAppId" value="" />
+                  <option name="projectId" value="" />
+                  <option name="projectNumber" value="" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

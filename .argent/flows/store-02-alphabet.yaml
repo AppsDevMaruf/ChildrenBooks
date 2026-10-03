@@ -1,0 +1,18 @@
+steps:
+  - echo: Open an alphabet lesson
+  - launch: com.childrenbooks
+  - tool: await-ui-element
+    args:
+      condition: visible
+      selector:
+        text: ABC Letters
+      timeoutMs: 10000
+  - tap:
+      x: 0.142
+      y: 0.383
+  - tool: await-ui-element
+    args:
+      condition: visible
+      selector:
+        text: Alphabet
+      timeoutMs: 10000

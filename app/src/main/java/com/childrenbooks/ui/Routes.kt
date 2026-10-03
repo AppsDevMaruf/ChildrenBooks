@@ -1,0 +1,57 @@
+package com.childrenbooks.ui
+
+object Routes {
+    const val IndexArgument = "index"
+    const val GameIdArgument = "gameId"
+    const val ListenCategoryArgument = "categoryId"
+
+    const val Home = "home"
+    const val Alphabet = "alphabet"
+    const val AlphabetDetail = "alphabet/{index}"
+    const val Numbers = "numbers"
+    const val NumberDetail = "numbers/{index}"
+    const val Weeks = "weeks"
+    const val Months = "months"
+    const val Seasons = "seasons"
+    const val Colours = "colours"
+    const val Animals = "animals"
+    const val Fishes = "fishes"
+    const val Foods = "foods"
+    const val Flowers = "flowers"
+    const val Birds = "birds"
+    const val Furniture = "furniture"
+    const val Fruits = "fruits"
+    const val Vegetables = "vegetables"
+    const val Shapes = "shapes"
+    const val Games = "games"
+    const val Listen = "listen"
+    const val ListenCategoryDetail = "listen/{categoryId}"
+    const val GamePrefix = "game"
+    const val GameDetail = "game/{gameId}"
+    const val About = "about"
+
+    val TopLevelRoutes = setOf(Home, Alphabet, Games, Listen, About)
+
+    val SupportedGameIds = setOf(
+        "trace",
+        "drag",
+        "quiz",
+        "find",
+        "letter",
+        "object-letter",
+        "number",
+        "color",
+        "memory",
+        "picture-match",
+        "guess-word",
+        "word-lock",
+        "word-puzzle",
+    )
+
+    fun alphabet(index: Int) = "$Alphabet/$index"
+    fun number(index: Int) = "$Numbers/$index"
+    fun game(id: String) = "$GamePrefix/$id"
+    fun listen(categoryId: String) = "$Listen/$categoryId"
+
+    fun isSupportedGame(gameId: String): Boolean = gameId in SupportedGameIds
+}

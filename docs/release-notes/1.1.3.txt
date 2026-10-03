@@ -1,0 +1,9 @@
+<en-US>
+What's new:
+• More reliable navigation across Lessons, Games, Listen, and Settings.
+• Learning and game progress now survives screen recreation.
+• Improved Match Game scoring and round controls.
+• Safer parent-gated links, sharing, and rating.
+• More reliable audio and text-to-speech playback.
+• General stability and performance improvements.
+</en-US>
