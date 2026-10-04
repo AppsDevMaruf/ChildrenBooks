@@ -1,5 +1,6 @@
 package com.childrenbooks.feature.world
 
+import com.childrenbooks.core.designsystem.components.pictureScale
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.animation.core.RepeatMode
@@ -327,15 +328,20 @@ private fun NodeCircle(node: SetNode, palette: WorldPalette, onClick: () -> Unit
                 node.isCurrent -> Icon(Icons.Rounded.PlayArrow, contentDescription = null, tint = KidColors.OnSecondary, modifier = Modifier.size(44.dp))
                 done -> Icon(Icons.Rounded.Check, contentDescription = null, tint = KidColors.Surface, modifier = Modifier.size(40.dp))
                 node.glyph != null -> Text(node.glyph, style = KidType.Title.copy(fontFamily = AndikaFamily), color = palette.ink)
-                else -> Image(
-                    painter = painterResource(node.cover),
-                    contentDescription = null,
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(6.dp)
-                        .clip(CircleShape),
-                )
+                else -> {
+                    val coverPainter = painterResource(node.cover)
+                    val coverScale = coverPainter.pictureScale(1f)
+                    Image(
+                        painter = coverPainter,
+                        contentDescription = null,
+                        contentScale = coverScale,
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(6.dp)
+                            .clip(CircleShape)
+                            .then(if (coverScale == ContentScale.Fit) Modifier.padding(8.dp) else Modifier),
+                    )
+                }
             }
         }
     }

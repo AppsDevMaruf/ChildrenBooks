@@ -1,5 +1,6 @@
 package com.childrenbooks.feature.play.games
 
+import androidx.compose.ui.res.stringResource
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -76,11 +77,11 @@ fun PictureMatchGame() {
     val isCorrect = selectedTitle == target.title
 
     GameShell(
-        subtitle = "Find the picture for the word",
+        subtitle = stringResource(R.string.game_picture_match_hint),
         score = score,
     ) {
         Text(
-            text = "Find: ${target.title}",
+            text = stringResource(R.string.game_find_title, target.title),
             style = MaterialTheme.typography.headlineSmall,
             fontWeight = FontWeight.ExtraBold,
             color = KidColors.PrimaryLip,
@@ -106,9 +107,9 @@ fun PictureMatchGame() {
         }
         Text(
             text = when {
-                selectedTitle == null -> "Tap the matching picture."
-                isCorrect -> "Wonderful! ${target.title} is correct."
-                else -> "Almost! Try the next word."
+                selectedTitle == null -> stringResource(R.string.game_picture_tap)
+                isCorrect -> stringResource(R.string.game_picture_correct, target.title)
+                else -> stringResource(R.string.game_picture_wrong)
             },
             style = MaterialTheme.typography.titleMedium,
             textAlign = TextAlign.Center,
@@ -117,7 +118,7 @@ fun PictureMatchGame() {
         )
         if (selectedTitle != null) {
             KidButton(
-                text = "Next picture",
+                text = stringResource(R.string.game_next_picture),
                 onClick = { round++ },
                 modifier = Modifier.fillMaxWidth(),
             )
@@ -130,16 +131,16 @@ fun GuessWordGame() {
     var round by rememberSaveable { mutableIntStateOf(0) }
     var score by rememberSaveable { mutableIntStateOf(0) }
     var typedWord by rememberSaveable(round) { mutableStateOf("") }
-    var message by rememberSaveable(round) { mutableStateOf("Tap the letters to spell the word.") }
+    var messageRes by rememberSaveable(round) { mutableIntStateOf(R.string.game_spell_start) }
     val current = wordRounds[round % wordRounds.size]
     val complete = typedWord == current.word
     val letterChoices = remember(round) { wordLetterChoices(current.word, round) }
 
     GameShell(
-        subtitle = "Look at the picture and spell it",
+        subtitle = stringResource(R.string.game_spell_hint),
         score = score,
     ) {
-        WordImageCard(image = current.image, label = "What word is this?")
+        WordImageCard(image = current.image, label = stringResource(R.string.game_spell_question))
         LetterSlots(word = current.word, typedWord = typedWord)
         LetterChoiceGrid(
             letters = letterChoices,
@@ -148,19 +149,19 @@ fun GuessWordGame() {
                 val nextIndex = typedWord.length
                 if (letter == current.word[nextIndex]) {
                     typedWord += letter
-                    message = if (nextIndex == current.word.lastIndex) {
+                    messageRes = if (nextIndex == current.word.lastIndex) {
                         score++
-                        "You spelled ${current.word}! Great job!"
+                        R.string.game_spell_done
                     } else {
-                        "Great! Find the next letter."
+                        R.string.game_spell_next_letter
                     }
                 } else {
-                    message = "Try a different letter."
+                    messageRes = R.string.game_spell_wrong
                 }
             },
         )
         Text(
-            text = message,
+            text = stringResource(messageRes, current.word),
             style = MaterialTheme.typography.titleMedium,
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.ExtraBold,
@@ -168,15 +169,15 @@ fun GuessWordGame() {
         )
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             KidButton(
-                text = "Clear",
+                text = stringResource(R.string.action_clear),
                 onClick = {
                     typedWord = ""
-                    message = "Try the letters again."
+                    messageRes = R.string.game_spell_retry
                 },
                 style = KidButtonStyle.Neutral,
             )
             if (complete) {
-                KidButton(text = "Next word", onClick = { round++ })
+                KidButton(text = stringResource(R.string.game_next_word), onClick = { round++ })
             }
         }
     }
@@ -193,10 +194,10 @@ fun WordLockGame() {
     val unlocked = displayedAttempt == current.word
 
     GameShell(
-        subtitle = "Turn each wheel to unlock the word",
+        subtitle = stringResource(R.string.game_lock_hint),
         score = score,
     ) {
-        WordImageCard(image = current.image, label = "Unlock the picture word")
+        WordImageCard(image = current.image, label = stringResource(R.string.game_lock_question))
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceEvenly,
@@ -213,9 +214,9 @@ fun WordLockGame() {
         }
         Text(
             text = when {
-                !checked -> "Turn the letters, then check your lock."
-                unlocked -> "Unlocked! The word is ${current.word}."
-                else -> "Not unlocked yet. Keep turning the wheels."
+                !checked -> stringResource(R.string.game_lock_start)
+                unlocked -> stringResource(R.string.game_lock_open, current.word)
+                else -> stringResource(R.string.game_lock_closed)
             },
             style = MaterialTheme.typography.titleMedium,
             textAlign = TextAlign.Center,
@@ -223,7 +224,7 @@ fun WordLockGame() {
             color = if (checked && unlocked) KidColors.Correct else KidColors.InkVariant,
         )
         KidButton(
-            text = if (checked && unlocked) "Next lock" else "Check lock",
+            text = stringResource(if (checked && unlocked) R.string.game_next_lock else R.string.game_check_lock),
             onClick = {
                 if (checked && unlocked) {
                     round++
@@ -249,10 +250,10 @@ fun WordPuzzleGame() {
     val complete = builtWord.length == current.word.length
 
     GameShell(
-        subtitle = "Put the mixed-up letters in the right order",
+        subtitle = stringResource(R.string.game_puzzle_hint),
         score = score,
     ) {
-        WordImageCard(image = current.image, label = "Build the picture word")
+        WordImageCard(image = current.image, label = stringResource(R.string.game_puzzle_question))
         LetterSlots(word = current.word, typedWord = builtWord)
         LetterChoiceGrid(
             letters = puzzleLetters,
@@ -264,10 +265,10 @@ fun WordPuzzleGame() {
         )
         Text(
             text = when {
-                !complete -> "Tap each mixed-up letter in the correct order."
-                !checked -> "Is this word correct?"
-                solved -> "Perfect puzzle! You built ${current.word}."
-                else -> "That order is not right. Tap Clear and try again."
+                !complete -> stringResource(R.string.game_puzzle_start)
+                !checked -> stringResource(R.string.game_puzzle_check_prompt)
+                solved -> stringResource(R.string.game_puzzle_solved, current.word)
+                else -> stringResource(R.string.game_puzzle_wrong)
             },
             style = MaterialTheme.typography.titleMedium,
             textAlign = TextAlign.Center,
@@ -276,7 +277,7 @@ fun WordPuzzleGame() {
         )
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             KidButton(
-                text = "Clear",
+                text = stringResource(R.string.action_clear),
                 onClick = {
                     builtWord = ""
                     checked = false
@@ -285,7 +286,7 @@ fun WordPuzzleGame() {
             )
             if (complete) {
                 KidButton(
-                    text = if (checked && solved) "Next puzzle" else "Check",
+                    text = stringResource(if (checked && solved) R.string.game_next_puzzle else R.string.action_check),
                     onClick = {
                         if (checked && solved) {
                             round++
@@ -446,7 +447,7 @@ private fun LockWheel(letter: Char, onShift: (Int) -> Unit) {
             IconButton(onClick = { onShift(1) }) {
                 Icon(
                     imageVector = Icons.Rounded.KeyboardArrowUp,
-                    contentDescription = "Next letter",
+                    contentDescription = stringResource(R.string.cd_next_letter),
                     tint = KidColors.Primary,
                 )
             }
@@ -459,7 +460,7 @@ private fun LockWheel(letter: Char, onShift: (Int) -> Unit) {
             IconButton(onClick = { onShift(-1) }) {
                 Icon(
                     imageVector = Icons.Rounded.KeyboardArrowDown,
-                    contentDescription = "Previous letter",
+                    contentDescription = stringResource(R.string.cd_previous_letter),
                     tint = KidColors.Primary,
                 )
             }

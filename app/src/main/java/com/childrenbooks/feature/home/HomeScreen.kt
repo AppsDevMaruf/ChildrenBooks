@@ -3,6 +3,7 @@
 
 package com.childrenbooks.feature.home
 
+import com.childrenbooks.core.designsystem.components.pictureScale
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -247,14 +248,17 @@ private fun ContinueCard(item: ContinueItem, onClick: () -> Unit) {
                     .background(KidColors.Surface, CircleShape),
                 contentAlignment = Alignment.Center,
             ) {
-                // Covers are 4:3 scenes, so they are cropped to fill the circle (white ring around).
+                // Scene covers fill the circle; word banners (days, colours) are fitted inside it.
+                val coverPainter = painterResource(item.cover)
+                val coverScale = coverPainter.pictureScale(1f)
                 Image(
-                    painter = painterResource(item.cover),
+                    painter = coverPainter,
                     contentDescription = null,
-                    contentScale = ContentScale.Crop,
+                    contentScale = coverScale,
                     modifier = Modifier
                         .size(112.dp)
-                        .clip(CircleShape),
+                        .clip(CircleShape)
+                        .then(if (coverScale == ContentScale.Fit) Modifier.padding(12.dp) else Modifier),
                 )
             }
         }

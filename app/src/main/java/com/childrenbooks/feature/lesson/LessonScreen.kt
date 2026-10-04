@@ -1,5 +1,6 @@
 package com.childrenbooks.feature.lesson
 
+import com.childrenbooks.core.designsystem.components.pictureScale
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
@@ -294,8 +295,10 @@ private fun ColumnScope.CountContent(card: CountCard, palette: WorldPalette, fit
 
 @Composable
 private fun ColumnScope.PictureContent(card: PictureCard, palette: WorldPalette) {
-    // Photos are 4:3 scenes with their own background, so they fill a rounded 4:3 tile edge to
-    // edge; the world tint only shows behind pictures that have transparent areas.
+    // Scene photos fill the rounded 4:3 tile edge to edge; word banners (days, colours) are
+    // fitted on the world tint so their text is never cropped.
+    val painter = painterResource(card.image)
+    val scale = painter.pictureScale(4f / 3f)
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -304,13 +307,14 @@ private fun ColumnScope.PictureContent(card: PictureCard, palette: WorldPalette)
         contentAlignment = Alignment.Center,
     ) {
         Image(
-            painter = painterResource(card.image),
+            painter = painter,
             contentDescription = null,
-            contentScale = ContentScale.Crop,
+            contentScale = scale,
             modifier = Modifier
                 .aspectRatio(4f / 3f)
                 .clip(KidShapes.Tile)
-                .background(palette.container),
+                .background(palette.container)
+                .then(if (scale == ContentScale.Fit) Modifier.padding(16.dp) else Modifier),
         )
     }
     Text(

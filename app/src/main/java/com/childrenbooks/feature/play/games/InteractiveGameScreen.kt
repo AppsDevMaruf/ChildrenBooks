@@ -1,5 +1,6 @@
 package com.childrenbooks.feature.play.games
 
+import androidx.compose.ui.res.stringResource
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -134,7 +135,7 @@ private fun TraceLetterGame() {
     val completed = points > 28
 
     GameShell(
-        subtitle = "Trace the dotted letter A with your finger",
+        subtitle = stringResource(R.string.game_trace_hint),
         score = score,
     ) {
         Card(
@@ -190,7 +191,7 @@ private fun TraceLetterGame() {
             }
         }
         Text(
-            text = if (completed) "Great tracing!" else "Start at the top and trace the letter.",
+            text = stringResource(if (completed) R.string.game_trace_done else R.string.game_trace_start),
             style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.ExtraBold,
             color = if (completed) KidColors.Correct else KidColors.InkVariant,
@@ -198,14 +199,14 @@ private fun TraceLetterGame() {
         )
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             KidButton(
-                text = "Clear",
+                text = stringResource(R.string.action_clear),
                 onClick = {
                     path = Path()
                     points = 0
                 },
             )
             KidButton(
-                text = "Done",
+                text = stringResource(R.string.action_done),
                 onClick = {
                     if (completed) score++
                     path = Path()
@@ -220,15 +221,16 @@ private fun TraceLetterGame() {
 private fun DragDropGame() {
     var score by rememberSaveable { mutableIntStateOf(0) }
     var dragged by rememberSaveable { mutableStateOf<String?>(null) }
-    var result by rememberSaveable { mutableStateOf("Drag Apple to Letter A") }
+    var resultRes by rememberSaveable { mutableIntStateOf(R.string.game_drag_start) }
+    var resultArg by rememberSaveable { mutableStateOf("") }
     val options = listOf(
         "Apple" to R.drawable.apple,
         "Ball" to R.drawable.b,
         "Cat" to R.drawable.cat,
     )
 
-    GameShell("Drag the picture that starts with A", score) {
-        DropTarget(title = "Letter A", subtitle = "Starts with Apple")
+    GameShell(stringResource(R.string.game_drag_hint), score) {
+        DropTarget(title = stringResource(R.string.game_drag_target), subtitle = stringResource(R.string.game_drag_target_sub))
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
@@ -242,16 +244,17 @@ private fun DragDropGame() {
                         dragged = name
                         if (name == "Apple") {
                             score++
-                            result = "Correct! Apple → A"
+                            resultRes = R.string.game_drag_correct
                         } else {
-                            result = "Try again. $name does not start with A."
+                            resultRes = R.string.game_drag_wrong
+                            resultArg = name
                         }
                     },
                 )
             }
         }
         Text(
-            text = result,
+            text = stringResource(resultRes, resultArg),
             style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.ExtraBold,
             color = if (dragged == "Apple") KidColors.Correct else KidColors.InkVariant,
@@ -339,8 +342,8 @@ private fun QuizModeGame() {
         listOf(answer.title, foods[(round + 3) % foods.size].title, foods[(round + 7) % foods.size].title).shuffled()
     }
 
-    GameShell("Choose the right answer", score) {
-        ImageQuestionCard(answer.image, "What is this?")
+    GameShell(stringResource(R.string.game_quiz_hint), score) {
+        ImageQuestionCard(answer.image, stringResource(R.string.game_quiz_question))
         choices.forEach { choice ->
             QuizChoice(
                 choice = choice,
@@ -355,7 +358,7 @@ private fun QuizModeGame() {
             )
         }
         KidButton(
-            text = "Next Quiz",
+            text = stringResource(R.string.game_quiz_next),
             enabled = selected != null,
             onClick = {
                 selected = null
@@ -395,7 +398,8 @@ private fun QuizChoice(choice: String, selected: String?, answer: String, onClic
 private fun FindObjectGame() {
     var targetIndex by rememberSaveable { mutableIntStateOf(0) }
     var score by rememberSaveable { mutableIntStateOf(0) }
-    var result by rememberSaveable { mutableStateOf("Tap the target object") }
+    var resultRes by rememberSaveable { mutableIntStateOf(R.string.game_find_start) }
+    var resultArg by rememberSaveable { mutableStateOf("") }
     val objects = listOf(
         LearningCatalog.animals[0],
         LearningCatalog.fruits[1],
@@ -404,7 +408,7 @@ private fun FindObjectGame() {
     )
     val target = objects[targetIndex % objects.size]
 
-    GameShell("Find: ${target.title}", score) {
+    GameShell(stringResource(R.string.game_find_title, target.title), score) {
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             objects.forEach { item ->
                 Card(
@@ -414,10 +418,12 @@ private fun FindObjectGame() {
                         .clickable {
                             if (item.title == target.title) {
                                 score++
-                                result = "Found ${item.title}!"
+                                resultRes = R.string.game_find_found
+                                resultArg = item.title
                                 targetIndex++
                             } else {
-                                result = "Oops, find ${target.title}."
+                                resultRes = R.string.game_find_oops
+                                resultArg = target.title
                             }
                         },
                     shape = RoundedCornerShape(22.dp),
@@ -435,8 +441,8 @@ private fun FindObjectGame() {
                 }
             }
         }
-        Text(result, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.ExtraBold, color = KidColors.Primary, textAlign = TextAlign.Center)
-        Text("Next target: ${target.title}", color = KidColors.InkVariant, fontWeight = FontWeight.Bold)
+        Text(stringResource(resultRes, resultArg), style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.ExtraBold, color = KidColors.Primary, textAlign = TextAlign.Center)
+        Text(stringResource(R.string.game_find_next, target.title), color = KidColors.InkVariant, fontWeight = FontWeight.Bold)
     }
 }
 

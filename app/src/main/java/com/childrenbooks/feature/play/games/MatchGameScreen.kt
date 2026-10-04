@@ -1,5 +1,8 @@
 package com.childrenbooks.feature.play.games
 
+import com.childrenbooks.R
+import androidx.compose.ui.res.stringResource
+import androidx.annotation.StringRes
 import com.childrenbooks.core.designsystem.KidColors
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
@@ -46,7 +49,7 @@ import com.childrenbooks.core.designsystem.components.KidButton
 import kotlin.random.Random
 
 private data class GameQuestion(
-    val prompt: String,
+    @StringRes val prompt: Int,
     val answer: String,
     val image: Int,
     val choices: List<String>,
@@ -83,7 +86,7 @@ fun MatchGameScreen(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Column(modifier = Modifier.weight(1f)) {
-                Text("Round ${round + 1} of $MatchGameRoundCount", color = KidColors.InkVariant, fontWeight = FontWeight.Bold)
+                Text(stringResource(R.string.game_round, round + 1, MatchGameRoundCount), color = KidColors.InkVariant, fontWeight = FontWeight.Bold)
                 LinearProgressIndicator(
                     progress = { (round + 1f) / MatchGameRoundCount },
                     modifier = Modifier
@@ -99,10 +102,10 @@ fun MatchGameScreen(
         }
         Text(
             text = when (gameId) {
-                "number" -> "Match the Number!"
-                "color" -> "Match the Color!"
-                "object-letter" -> "Apple → A"
-                else -> "Match the Letter!"
+                "number" -> stringResource(R.string.game_match_number_title)
+                "color" -> stringResource(R.string.game_match_color_title)
+                "object-letter" -> stringResource(R.string.game_object_letter)
+                else -> stringResource(R.string.game_match_letter_title)
             },
             style = MaterialTheme.typography.headlineSmall,
             color = KidColors.PrimaryLip,
@@ -110,7 +113,7 @@ fun MatchGameScreen(
             modifier = Modifier.padding(top = 28.dp),
         )
         Text(
-            text = question.prompt,
+            text = stringResource(question.prompt),
             color = KidColors.InkVariant,
             textAlign = TextAlign.Center,
             modifier = Modifier.padding(top = 5.dp, bottom = 14.dp),
@@ -163,7 +166,7 @@ fun MatchGameScreen(
         }
         AnimatedVisibility(selected != null) {
             KidButton(
-                text = if (round == MatchGameRoundCount - 1) "See result" else "Next round",
+                text = stringResource(if (round == MatchGameRoundCount - 1) R.string.game_see_result else R.string.game_next_round),
                 onClick = matchGameViewModel::nextRound,
                 modifier = Modifier
                     .fillMaxWidth()
@@ -250,18 +253,18 @@ private fun GameComplete(score: Int, onPlayAgain: () -> Unit) {
     ) {
         Icon(Icons.Rounded.EmojiEvents, contentDescription = null, tint = KidColors.Star, modifier = Modifier.size(112.dp))
         Text(
-            text = "Great job!",
+            text = stringResource(R.string.reward_great_job),
             style = MaterialTheme.typography.headlineLarge,
             fontWeight = FontWeight.ExtraBold,
             color = KidColors.PrimaryLip,
         )
         Text(
-            text = "You scored $score out of $MatchGameRoundCount",
+            text = stringResource(R.string.game_score, score, MatchGameRoundCount),
             style = MaterialTheme.typography.titleLarge,
             color = KidColors.InkVariant,
             modifier = Modifier.padding(top = 8.dp, bottom = 24.dp),
         )
-        KidButton(text = "Play again", onClick = onPlayAgain)
+        KidButton(text = stringResource(R.string.reward_play_again), onClick = onPlayAgain)
     }
 }
 
@@ -272,7 +275,7 @@ private fun createQuestion(gameId: String, round: Int): GameQuestion {
             val current = lessons[round % lessons.size]
             val choices = choiceIndexes(round, lessons.size).map { lessons[it].number }
             GameQuestion(
-                prompt = "Which number matches the picture?",
+                prompt = R.string.game_prompt_number,
                 answer = current.number,
                 image = current.countImage,
                 choices = choices,
@@ -283,7 +286,7 @@ private fun createQuestion(gameId: String, round: Int): GameQuestion {
             val current = lessons[round % lessons.size]
             val choices = choiceIndexes(round, lessons.size).map { lessons[it].title }
             GameQuestion(
-                prompt = "Choose the name of this color.",
+                prompt = R.string.game_prompt_color,
                 answer = current.title,
                 image = current.image,
                 choices = choices,
@@ -294,7 +297,7 @@ private fun createQuestion(gameId: String, round: Int): GameQuestion {
             val current = lessons[round % lessons.size]
             val choices = choiceIndexes(round, lessons.size).map { lessons[it].letter }
             GameQuestion(
-                prompt = "Which letter starts this object?",
+                prompt = R.string.game_prompt_object_letter,
                 answer = current.letter,
                 image = current.exampleImage,
                 choices = choices,
@@ -305,7 +308,7 @@ private fun createQuestion(gameId: String, round: Int): GameQuestion {
             val current = lessons[round % lessons.size]
             val choices = choiceIndexes(round, lessons.size).map { lessons[it].letter.lowercase() }
             GameQuestion(
-                prompt = "Match the uppercase letter to its lowercase pair.",
+                prompt = R.string.game_prompt_letter,
                 answer = current.letter.lowercase(),
                 image = current.exampleImage,
                 choices = choices,
