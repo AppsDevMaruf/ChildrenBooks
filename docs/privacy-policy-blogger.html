@@ -9,7 +9,7 @@
 .cbpp .cb-hero h1{font-family:inherit;font-size:32px;font-weight:800;line-height:1.2;color:#fff;margin:6px 0 8px;padding:0;border:0}
 .cbpp .cb-hero p{margin:0;font-size:16px;opacity:.95;max-width:520px}
 .cbpp .cb-pill{display:inline-block;margin-top:14px;background:var(--amber);color:#3A2800;font-weight:800;font-size:13px;padding:6px 14px;border-radius:999px}
-.cbpp .cb-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:0 0 18px}
+.cbpp .cb-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 18px}
 .cbpp .cb-tile{background:var(--soft);border:1px solid var(--line);border-radius:18px;padding:16px}
 .cbpp .cb-tile svg{width:28px;height:28px;fill:var(--blue);display:block}
 .cbpp .cb-tile b{display:block;font-weight:800;font-size:16px;margin:8px 0 2px;color:var(--blue-ink)}
@@ -28,6 +28,7 @@
 .cbpp a{color:var(--blue);font-weight:800;text-decoration:none}
 .cbpp a:hover{text-decoration:underline}
 .cbpp .cb-foot{color:var(--muted);font-size:13px;text-align:center;margin:18px 0 0}
+@media (max-width:640px){.cbpp .cb-tiles{grid-template-columns:1fr}}
 @media (max-width:520px){.cbpp .cb-hero{padding:24px 20px;border-radius:20px}.cbpp .cb-hero h1{font-size:26px}.cbpp .cb-card{padding:16px 18px}}
 </style>
 <div class="cb-hero">
