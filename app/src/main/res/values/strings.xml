@@ -7,7 +7,6 @@
     <string name="tbAlphabet">Alphabet</string>
     <string name="tbAnimals">Animals</string>
 
-
     <string name="app_name">Children Books</string>
     <string name="AaText">A is for Apple</string>
     <string name="BbText">B is for Bee </string>
@@ -143,69 +142,12 @@
 
     <!-- Shared app navigation and actions -->
     <string name="nav_home">Home</string>
-    <string name="nav_lessons">Lessons</string>
     <string name="nav_play">Play</string>
     <string name="nav_listen">Listen</string>
     <string name="nav_settings">Settings</string>
-    <string name="nav_mini_games">Mini-Games</string>
-    <string name="nav_listen_enjoy">Listen &amp; Enjoy</string>
-    <string name="drawer_more_apps">More apps</string>
-    <string name="drawer_privacy_policy">Privacy policy</string>
-    <string name="drawer_rate_this_app">Rate this app</string>
-    <string name="drawer_share">Share</string>
-    <string name="settings_subtitle">Manage privacy, sharing and rating.</string>
-    <string name="action_previous">Previous</string>
     <string name="action_next">Next</string>
-    <string name="action_close">Close</string>
     <string name="action_cancel">Cancel</string>
-    <string name="parent_gate_title">Parent check</string>
-    <string name="parent_gate_question">What is 7 + 2?</string>
-    <string name="parent_gate_message">A grown-up should approve links, sharing, email and store actions.</string>
-    <string name="parent_gate_continue">Continue</string>
-    <string name="privacy_safety_title">Privacy &amp; Safety</string>
-    <string name="privacy_safety_subtitle">Designed for kids, with parent-approved outside links.</string>
-    <string name="privacy_safety_no_ads">No ads or analytics SDKs are included in this app build.</string>
-    <string name="privacy_safety_no_tracking">The app does not ask for account details, location, contacts, camera or microphone permission.</string>
-    <string name="privacy_safety_parent_gate">External links, sharing and rating actions require a parent check before leaving the app.</string>
-    <string name="privacy_safety_external_links">Text-to-speech may use the device speech engine, and full policy links open outside the app after parent approval.</string>
-    <string name="privacy_open_full_policy">Open full privacy policy</string>
 
-    <!-- Home -->
-    <string name="home_category_abc_letters">ABC Letters</string>
-    <string name="home_category_numbers">Numbers</string>
-    <string name="home_category_days">7 Days</string>
-    <string name="home_category_months">12 Months</string>
-    <string name="home_category_seasons">6 Seasons</string>
-    <string name="home_category_rainbow">Rainbow</string>
-    <string name="home_category_animals">Animals</string>
-    <string name="home_category_fishes">Fishes</string>
-    <string name="home_category_birds">Birds</string>
-    <string name="home_category_flowers">Flowers</string>
-    <string name="home_category_foods">Foods</string>
-    <string name="home_category_fruits">Fruits</string>
-    <string name="home_category_vegetables">Vegetables</string>
-    <string name="home_category_furniture">Furniture</string>
-    <string name="home_category_shapes">Shapes</string>
-    <string name="home_category_play_learn">Play &amp; Learn</string>
-    <string name="home_section_learning">Learning</string>
-    <string name="home_view_all">View all</string>
-    <string name="home_search_title">Search lessons</string>
-    <string name="home_search_hint">Type ABC, Animals, Listen…</string>
-
-    <!-- Lesson details -->
-    <string name="lesson_title_alphabet">Alphabet</string>
-    <string name="lesson_title_numbers">Numbers</string>
-    <string name="lesson_progress_format">%1$s • %2$d of %3$d</string>
-    <string name="lesson_swipe_instruction">Swipe left or right to explore</string>
-    <string name="alphabet_listen_to_letter">Listen to %1$s</string>
-    <string name="alphabet_lowercase_letter">Lowercase %1$s</string>
-    <string name="alphabet_is_for"> is for </string>
-    <string name="alphabet_tap_me">Tap\nme!</string>
-    <string name="number_listen_to_number">Listen to %1$s</string>
-    <string name="number_count_label">Count %1$s</string>
-    <string name="number_word_label"> is %1$s</string>
-    <string name="alphabet_grid_letter_format">%1$s letter</string>
-    <string name="route_rainbow_colours">Rainbow Colours</string>
     <string name="game_trace_letter">Trace Letter</string>
     <string name="game_letter_match">Letter Match</string>
     <string name="game_object_letter">Apple → A</string>
@@ -214,12 +156,233 @@
     <string name="game_find_object">Find Object</string>
     <string name="game_number_match">Number Match</string>
     <string name="game_color_match">Color Match</string>
-    <string name="game_memory_match">Memory Match</string>
     <string name="game_picture_match">Picture Match</string>
     <string name="game_guess_word">Guess the Word</string>
     <string name="game_word_lock">Word Lock</string>
     <string name="game_word_puzzle">Word Puzzle</string>
     <string name="toast_no_compatible_app">No compatible app found</string>
     <string name="share_children_books">Share Children Books</string>
+
+    <!-- ===================== Redesign v2 ===================== -->
+
+    <!-- Actions -->
+    <string name="action_save">Save</string>
+    <string name="action_skip">Skip</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_hello">Hello!</string>
+    <string name="onboarding_hello_body">Let\'s learn letters, numbers and words together.</string>
+    <string name="onboarding_hello_spoken">Hello! Let\'s learn letters, numbers and words together.</string>
+    <string name="onboarding_start">Start</string>
+    <string name="onboarding_who">Who is learning today?</string>
+    <string name="onboarding_lets_go">Let\'s go!</string>
+    <string name="onboarding_change_later">A grown-up can change this later in Grown-ups.</string>
+    <string name="age_young_range">Ages 3–5</string>
+    <string name="age_young_name">Little learner</string>
+    <string name="age_young_spoken">Little learner. Ages three to five.</string>
+    <string name="age_older_range">Ages 6–8</string>
+    <string name="age_older_name">Big learner</string>
+    <string name="age_older_spoken">Big learner. Ages six to eight.</string>
+
+    <!-- Home -->
+    <string name="greeting_morning">Good morning!</string>
+    <string name="greeting_morning_name">Good morning, %1$s!</string>
+    <string name="greeting_afternoon">Good afternoon!</string>
+    <string name="greeting_afternoon_name">Good afternoon, %1$s!</string>
+    <string name="greeting_evening">Good evening!</string>
+    <string name="greeting_evening_name">Good evening, %1$s!</string>
+    <string name="home_continue">Keep going</string>
+    <string name="home_up_next">Up next</string>
+    <string name="home_worlds">Worlds</string>
+    <string name="nav_stickers">Stickers</string>
+    <string name="world_new">New</string>
+    <string name="world_sets_short">%1$d/%2$d</string>
+    <string name="world_sets_done">%1$d of %2$d sets done</string>
+
+    <!-- Worlds -->
+    <string name="world_letters">Letters</string>
+    <string name="world_numbers">Numbers</string>
+    <string name="world_time">Time</string>
+    <string name="world_colours">Colours</string>
+    <string name="world_nature">Nature</string>
+    <string name="world_food">Food</string>
+    <string name="world_things">Things</string>
+    <string name="set_range">%1$s to %2$s</string>
+    <string name="set_status_done">Done, %1$d stars</string>
+    <string name="set_status_new">New</string>
+    <string name="set_status_play_now">Play now</string>
+
+    <!-- Lesson -->
+    <string name="lesson_position">%1$d of %2$d</string>
+    <string name="lesson_lets_play">Let\'s play!</string>
+
+    <!-- Practice -->
+    <string name="prompt_find">Find the %1$s</string>
+    <string name="prompt_how_many">How many?</string>
+    <string name="prompt_starts_with">What starts with %1$s?</string>
+    <string name="practice_tap_answer">Tap the answer</string>
+    <string name="feedback_great">Great job!</string>
+    <string name="feedback_try_again">Try again!</string>
+    <string name="feedback_hint">Look for the %1$s</string>
+    <string name="feedback_reveal">This is the %1$s</string>
+    <string name="state_correct">Correct</string>
+    <string name="state_try_again">Try again</string>
+
+    <!-- Reward -->
+    <string name="reward_great_job">Great job!</string>
+    <string name="reward_great_job_name">Great job, %1$s!</string>
+    <string name="reward_next_set">Next: %1$s</string>
+    <string name="reward_play_again">Play again</string>
+    <string name="sticker_new">New sticker!</string>
+
+    <!-- Stickers -->
+    <string name="stickers_title">My stickers</string>
+    <string name="stickers_subtitle">Finish a set to win a new sticker.</string>
+    <string name="stickers_count">%1$d/%2$d</string>
+    <string name="stickers_tip">Play a set to the end to win the next sticker!</string>
+
+    <!-- Play -->
+    <string name="play_subtitle">Pick a game to play.</string>
+    <string name="play_section_letters">Letters</string>
+    <string name="play_section_look">Look and count</string>
+    <string name="play_section_words">Words</string>
+    <string name="game_letter_match_sub">Big letter to small letter</string>
+    <string name="game_object_letter_sub">What letter does it start with?</string>
+    <string name="game_trace_letter_sub">Trace with your finger</string>
+    <string name="game_drag_drop_sub">Drag the right picture</string>
+    <string name="game_number_match_sub">Count and pick the number</string>
+    <string name="game_color_match_sub">Name the colour</string>
+    <string name="game_find_object_sub">Tap the right picture</string>
+    <string name="game_quiz_mode_sub">What is this?</string>
+    <string name="game_picture_match_sub">Match the word to its picture</string>
+    <string name="game_guess_word_sub">Spell the picture word</string>
+    <string name="game_word_lock_sub">Turn the wheels to unlock</string>
+    <string name="game_word_puzzle_sub">Put the letters in order</string>
+
+    <!-- Listen -->
+    <string name="listen_subtitle">Sounds, stories and rhymes.</string>
+    <string name="listen_bedtime">Bedtime</string>
+    <string name="listen_animal_sounds">Animal sounds</string>
+    <string name="listen_animal_sounds_count">10 sounds</string>
+    <string name="listen_kids_stories">Stories</string>
+    <string name="listen_kids_stories_count">5 stories</string>
+    <string name="listen_rhymes">Rhymes</string>
+    <string name="listen_rhymes_count">20 rhymes</string>
+
+    <!-- Parent gate -->
+    <string name="gate_title">Grown-ups only</string>
+    <string name="gate_body">Answer this to continue.</string>
+    <string name="gate_what_is">What is</string>
+    <string name="gate_question">%1$s plus %2$s?</string>
+    <string name="gate_wrong">That\'s not right. Try again.</string>
+    <string name="gate_locked">Too many tries. Wait %1$d seconds.</string>
+    <string name="gate_footnote">This keeps settings, links and sharing away from little hands.</string>
+
+    <!-- Grown-ups report -->
+    <string name="grownups_title">Grown-ups</string>
+    <string name="report_heading">%1$s\'s learning</string>
+    <string name="report_your_child">Your child</string>
+    <string name="report_week">Week</string>
+    <string name="report_month">Month</string>
+    <string name="report_this_week">This week</string>
+    <string name="report_this_month">This month</string>
+    <string name="report_metric_time">Learning time</string>
+    <string name="report_metric_sets">Sets finished</string>
+    <string name="report_metric_streak">Streak</string>
+    <string name="unit_minutes_short">min</string>
+    <string name="report_minutes_each_day">Minutes each day</string>
+    <string name="report_words_by_world">Words by world</string>
+    <string name="report_world_progress">%1$d/%2$d mastered</string>
+    <string name="report_needs_practice">Needs a little practice</string>
+    <string name="report_needs_practice_hint">Tap a word to open its lesson.</string>
+    <string name="report_needs_practice_empty">Nothing yet. Words that need more practice will show up here.</string>
+    <string name="report_summary">%1$s · %2$s</string>
+    <string name="report_share">Share</string>
+    <string name="report_share_chooser">Share learning report</string>
+    <string name="report_share_title">Children Books: %1$s, %2$s</string>
+    <string name="report_share_minutes">Learning time: %1$s</string>
+    <string name="report_share_sets">Sets finished: %1$d</string>
+    <string name="report_share_streak">Streak: %1$s</string>
+    <string name="report_share_mastered">Words mastered: %1$d</string>
+    <string name="report_share_practice">Needs practice: %1$s</string>
+    <string name="mastery_mastered">Mastered</string>
+    <string name="mastery_practising">Practising</string>
+    <string name="mastery_new">New</string>
+
+    <!-- Grown-ups settings -->
+    <string name="settings_section_child">Child</string>
+    <string name="settings_section_privacy">Privacy</string>
+    <string name="settings_section_about">About</string>
+    <string name="settings_section_progress">Progress</string>
+    <string name="settings_child_name">Child\'s name</string>
+    <string name="settings_child_name_empty">Not set</string>
+    <string name="settings_child_name_hint">Used in greetings like “Great job, Mia!”. It stays on this device.</string>
+    <string name="settings_age">Age</string>
+    <string name="settings_age_hint">Changes how many answers each question shows.</string>
+    <string name="settings_show_words">Show words</string>
+    <string name="settings_show_words_hint">Show the word under each answer picture.</string>
+    <string name="settings_bedtime">Bedtime mode</string>
+    <string name="settings_bedtime_hint">A softer, slower voice and warm, dim colours in Listen.</string>
+    <string name="settings_privacy_summary">No ads, no accounts and no tracking. Progress stays on this device and is never uploaded.</string>
+    <string name="settings_privacy_policy">Privacy policy</string>
+    <string name="settings_rate">Rate this app</string>
+    <string name="settings_share_app">Share this app</string>
+    <string name="settings_more_apps">More apps</string>
+    <string name="settings_version">Version %1$s</string>
+    <string name="settings_reset">Reset progress</string>
+    <string name="settings_reset_hint">Clears stars, stickers and learning history.</string>
+    <string name="settings_reset_confirm_title">Reset all progress?</string>
+    <string name="settings_reset_confirm_body">This clears stars, stickers and learning history on this device. It can\'t be undone.</string>
+    <string name="settings_reset_confirm">Reset</string>
+
+    <!-- Accessibility -->
+    <string name="cd_home">Home</string>
+    <string name="cd_back">Back</string>
+    <string name="cd_back_to_home">Back to home</string>
+    <string name="cd_close">Close</string>
+    <string name="cd_avatar">Owl friend</string>
+    <string name="cd_grownups">Grown-ups</string>
+    <string name="cd_play">Play</string>
+    <string name="cd_stop">Stop</string>
+    <string name="cd_hear_again">Hear it again</string>
+    <string name="cd_hear_question">Hear the question</string>
+    <string name="cd_open_lesson">Open lesson</string>
+    <string name="cd_card_position">Card %1$d of %2$d</string>
+    <string name="cd_question_position">Question %1$d of %2$d</string>
+    <string name="cd_letter_card">%1$s. %2$s</string>
+    <string name="cd_count_card">%1$s, %2$s</string>
+    <string name="cd_new_sticker">New sticker: %1$s</string>
+    <string name="cd_sticker_locked">Locked sticker</string>
+    <string name="cd_sticker_next">Next sticker to win</string>
+    <string name="cd_world_mastery">%1$s: %2$d mastered, %3$d practising, out of %4$d</string>
+
+    <plurals name="stars_count">
+        <item quantity="one">%d star</item>
+        <item quantity="other">%d stars</item>
+    </plurals>
+    <plurals name="stars_earned">
+        <item quantity="one">You earned %d star</item>
+        <item quantity="other">You earned %d stars</item>
+    </plurals>
+    <plurals name="new_stickers">
+        <item quantity="one">%d new</item>
+        <item quantity="other">%d new</item>
+    </plurals>
+    <plurals name="report_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="report_sets">
+        <item quantity="one">%d set</item>
+        <item quantity="other">%d sets</item>
+    </plurals>
+    <plurals name="report_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="unit_days">
+        <item quantity="one">day</item>
+        <item quantity="other">days</item>
+    </plurals>
 
 </resources>
