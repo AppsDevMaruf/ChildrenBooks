@@ -32,6 +32,8 @@ import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.layout.Layout
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.childrenbooks.R
@@ -48,15 +50,32 @@ fun KidTopBar(
     center: @Composable () -> Unit = {},
     trailing: @Composable () -> Unit = {},
 ) {
-    Box(
+    // The centre slot is measured last and limited to the space left between the two side slots
+    // (kept symmetric so it stays visually centred), so a long title can never slide under them.
+    Layout(
+        content = {
+            Box { leading() }
+            Box { center() }
+            Box { trailing() }
+        },
         modifier = modifier
             .fillMaxWidth()
             .padding(horizontal = horizontalPadding, vertical = 12.dp)
             .heightIn(min = 60.dp),
-    ) {
-        Box(Modifier.align(Alignment.CenterStart)) { leading() }
-        Box(Modifier.align(Alignment.Center)) { center() }
-        Box(Modifier.align(Alignment.CenterEnd)) { trailing() }
+    ) { measurables, constraints ->
+        val loose = constraints.copy(minWidth = 0, minHeight = 0)
+        val lead = measurables[0].measure(loose)
+        val trail = measurables[2].measure(loose)
+        val gap = 8.dp.roundToPx()
+        val side = maxOf(lead.width, trail.width)
+        val centreMax = (constraints.maxWidth - 2 * (side + gap)).coerceAtLeast(0)
+        val mid = measurables[1].measure(loose.copy(maxWidth = centreMax))
+        val height = maxOf(constraints.minHeight, lead.height, trail.height, mid.height)
+        layout(constraints.maxWidth, height) {
+            lead.placeRelative(0, (height - lead.height) / 2)
+            trail.placeRelative(constraints.maxWidth - trail.width, (height - trail.height) / 2)
+            mid.placeRelative((constraints.maxWidth - mid.width) / 2, (height - mid.height) / 2)
+        }
     }
 }
 
@@ -114,7 +133,7 @@ fun KidTitleChip(
             .padding(horizontal = 18.dp, vertical = 8.dp),
         contentAlignment = Alignment.Center,
     ) {
-        Text(text = text, style = KidType.Caption, color = content, maxLines = 1)
+        Text(text = text, style = KidType.Caption, color = content, maxLines = 1, overflow = TextOverflow.Ellipsis)
     }
 }
 

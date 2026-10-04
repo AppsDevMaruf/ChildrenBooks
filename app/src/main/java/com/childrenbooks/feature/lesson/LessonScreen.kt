@@ -40,6 +40,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
@@ -131,7 +132,7 @@ fun LessonScreen(
             leading = { KidHomeButton(onClick = onHome) },
             center = {
                 KidTitleChip(
-                    text = "${stringResource(state.worldTitle)} · ${state.setTitle}",
+                    text = stringResource(state.worldTitle),
                     container = palette.container,
                     content = palette.ink,
                 )
@@ -164,7 +165,7 @@ fun LessonScreen(
         ) {
             SetDots(count = state.cards.size, current = state.index, activeColor = palette.accent)
             Text(
-                text = stringResource(R.string.lesson_position, state.index + 1, state.cards.size),
+                text = stringResource(R.string.lesson_set_position, state.setTitle, state.index + 1, state.cards.size),
                 style = KidType.Caption,
                 color = KidColors.InkVariant,
             )
@@ -293,21 +294,23 @@ private fun ColumnScope.CountContent(card: CountCard, palette: WorldPalette, fit
 
 @Composable
 private fun ColumnScope.PictureContent(card: PictureCard, palette: WorldPalette) {
+    // Photos are 4:3 scenes with their own background, so they fill a rounded 4:3 tile edge to
+    // edge; the world tint only shows behind pictures that have transparent areas.
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .weight(1f, fill = false)
-            .heightIn(max = 300.dp)
-            .background(palette.container, KidShapes.Tile),
+            .heightIn(max = 300.dp),
         contentAlignment = Alignment.Center,
     ) {
         Image(
             painter = painterResource(card.image),
             contentDescription = null,
-            contentScale = ContentScale.Fit,
+            contentScale = ContentScale.Crop,
             modifier = Modifier
-                .fillMaxSize()
-                .padding(12.dp),
+                .aspectRatio(4f / 3f)
+                .clip(KidShapes.Tile)
+                .background(palette.container),
         )
     }
     Text(

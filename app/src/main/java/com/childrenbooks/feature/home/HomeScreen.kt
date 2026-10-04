@@ -215,7 +215,7 @@ private fun ContinueCard(item: ContinueItem, onClick: () -> Unit) {
             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 Text(label, style = KidType.Small, color = KidColors.OnPrimary)
                 Text(worldTitle, style = KidType.Title, color = KidColors.OnPrimary, maxLines = 1, overflow = TextOverflow.Ellipsis)
-                Text(item.setTitle, style = KidType.Label, color = KidColors.OnPrimary, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                Text(item.setTitle, style = KidType.Label, color = KidColors.OnPrimary, maxLines = 2, overflow = TextOverflow.Ellipsis)
                 Spacer(Modifier.height(10.dp))
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
                     Box(
@@ -247,12 +247,13 @@ private fun ContinueCard(item: ContinueItem, onClick: () -> Unit) {
                     .background(KidColors.Surface, CircleShape),
                 contentAlignment = Alignment.Center,
             ) {
+                // Covers are 4:3 scenes, so they are cropped to fill the circle (white ring around).
                 Image(
                     painter = painterResource(item.cover),
                     contentDescription = null,
-                    contentScale = ContentScale.Fit,
+                    contentScale = ContentScale.Crop,
                     modifier = Modifier
-                        .size(96.dp)
+                        .size(112.dp)
                         .clip(CircleShape),
                 )
             }
