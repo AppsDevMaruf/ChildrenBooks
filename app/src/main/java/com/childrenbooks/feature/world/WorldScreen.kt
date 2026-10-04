@@ -1,5 +1,6 @@
 package com.childrenbooks.feature.world
 
+import com.childrenbooks.core.designsystem.components.circleFitPadding
 import com.childrenbooks.core.designsystem.components.pictureScale
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -339,7 +340,14 @@ private fun NodeCircle(node: SetNode, palette: WorldPalette, onClick: () -> Unit
                             .fillMaxSize()
                             .padding(6.dp)
                             .clip(CircleShape)
-                            .then(if (coverScale == ContentScale.Fit) Modifier.padding(8.dp) else Modifier),
+                            .then(
+                                if (coverScale == ContentScale.Fit) {
+                                    // The circle inside the 6 dp ring.
+                                    Modifier.padding(coverPainter.circleFitPadding(size - 12.dp))
+                                } else {
+                                    Modifier
+                                },
+                            ),
                     )
                 }
             }

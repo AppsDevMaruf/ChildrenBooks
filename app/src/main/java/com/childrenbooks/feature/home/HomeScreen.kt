@@ -3,6 +3,7 @@
 
 package com.childrenbooks.feature.home
 
+import com.childrenbooks.core.designsystem.components.circleFitPadding
 import com.childrenbooks.core.designsystem.components.pictureScale
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -258,7 +259,13 @@ private fun ContinueCard(item: ContinueItem, onClick: () -> Unit) {
                     modifier = Modifier
                         .size(112.dp)
                         .clip(CircleShape)
-                        .then(if (coverScale == ContentScale.Fit) Modifier.padding(12.dp) else Modifier),
+                        .then(
+                            if (coverScale == ContentScale.Fit) {
+                                Modifier.padding(coverPainter.circleFitPadding(112.dp))
+                            } else {
+                                Modifier
+                            },
+                        ),
                 )
             }
         }
