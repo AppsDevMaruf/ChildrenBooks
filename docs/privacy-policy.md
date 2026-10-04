@@ -48,8 +48,12 @@ Children Books is made for children and families. It is designed to meet the Goo
 
 Parents or guardians can contact the developer with privacy questions or requests.
 
+## Changes To This Policy
+
+If this policy changes, the new version will be posted on the policy page with a new effective date.
+
 ## Contact
 
 Developer: Maruf Alam
 
-Email: marufalam120@gmail.com
+Email: contact.marufalam@gmail.com
