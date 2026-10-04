@@ -2,6 +2,9 @@
 
 package com.childrenbooks.feature.reward
 
+import com.childrenbooks.core.designsystem.components.KidIconButton
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.annotation.StringRes
 import androidx.compose.animation.core.Animatable
@@ -185,11 +188,10 @@ fun RewardScreen(
                 .statusBarsPadding()
                 .navigationBarsPadding()
                 .verticalScroll(rememberScrollState())
-                .padding(horizontal = 20.dp, vertical = 24.dp),
+                .padding(horizontal = 20.dp, vertical = 16.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(18.dp),
+            verticalArrangement = Arrangement.spacedBy(14.dp),
         ) {
-            Spacer(Modifier.height(24.dp))
             Text(
                 text = if (state.childName.isBlank()) stringResource(R.string.reward_great_job) else stringResource(R.string.reward_great_job_name, state.childName),
                 style = KidType.Display.copy(fontSize = KidType.Display.fontSize * 0.86f),
@@ -216,7 +218,6 @@ fun RewardScreen(
                 )
             }
             StarCounter(stars = state.totalStars)
-            Spacer(Modifier.height(8.dp))
             if (state.nextSetIndex != null && state.nextSetTitle != null) {
                 KidButton(
                     text = stringResource(R.string.reward_next_set, state.nextSetTitle),
@@ -225,25 +226,47 @@ fun RewardScreen(
                     modifier = Modifier.fillMaxWidth(),
                 )
             }
-            Row(horizontalArrangement = Arrangement.spacedBy(14.dp)) {
-                KidButton(
-                    text = stringResource(R.string.reward_play_again),
+            // Secondary actions are round icon buttons with a label underneath, so the
+            // words never get cut off on narrow phones.
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceEvenly,
+            ) {
+                LabeledIconButton(
+                    icon = Icons.Rounded.Replay,
+                    label = stringResource(R.string.reward_play_again),
                     onClick = onPlayAgain,
-                    style = KidButtonStyle.Neutral,
-                    leadingIcon = Icons.Rounded.Replay,
-                    height = 56.dp,
-                    modifier = Modifier.weight(1f),
                 )
-                KidButton(
-                    text = stringResource(R.string.nav_home),
+                LabeledIconButton(
+                    icon = Icons.Rounded.Home,
+                    label = stringResource(R.string.nav_home),
                     onClick = onHome,
-                    style = KidButtonStyle.Neutral,
-                    leadingIcon = Icons.Rounded.Home,
-                    height = 56.dp,
-                    modifier = Modifier.weight(1f),
                 )
             }
         }
+    }
+}
+
+@Composable
+private fun LabeledIconButton(icon: ImageVector, label: String, onClick: () -> Unit) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(6.dp),
+    ) {
+        KidIconButton(
+            icon = icon,
+            contentDescription = label,
+            onClick = onClick,
+            size = 60.dp,
+        )
+        // The button already announces the label to TalkBack.
+        Text(
+            text = label,
+            style = KidType.Caption,
+            color = KidColors.InkVariant,
+            maxLines = 1,
+            modifier = Modifier.clearAndSetSemantics { },
+        )
     }
 }
 

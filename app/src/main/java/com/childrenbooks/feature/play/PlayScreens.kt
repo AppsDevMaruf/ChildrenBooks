@@ -99,7 +99,7 @@ object PlayCatalog {
 @Composable
 fun PlayHubRoute(onHome: () -> Unit, onOpenGame: (String) -> Unit) {
     LazyVerticalGrid(
-        columns = GridCells.Adaptive(minSize = 156.dp),
+        columns = GridCells.Adaptive(minSize = 140.dp),
         modifier = Modifier
             .fillMaxSize()
             .background(KidColors.Background)
@@ -172,7 +172,10 @@ private fun GameTile(game: PlayGame, onClick: () -> Unit) {
                 text = title,
                 style = KidType.Label,
                 color = game.palette.ink,
-                maxLines = 1,
+                // Two lines are reserved for the title and the subtitle so every tile in a row
+                // has the same height, whether or not its text wraps.
+                minLines = 2,
+                maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier.padding(top = 10.dp),
             )
@@ -180,6 +183,7 @@ private fun GameTile(game: PlayGame, onClick: () -> Unit) {
                 text = subtitle,
                 style = KidType.Small,
                 color = game.palette.ink,
+                minLines = 2,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
             )

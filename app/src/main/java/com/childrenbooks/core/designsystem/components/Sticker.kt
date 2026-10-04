@@ -4,6 +4,7 @@ import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
@@ -38,7 +39,9 @@ fun StickerImage(
     isNew: Boolean = false,
     corner: Dp = 22.dp,
 ) {
-    Box(modifier.rotate(rotation)) {
+    BoxWithConstraints(modifier.rotate(rotation)) {
+        // Grid tiles are small, so they get a one-word badge that never wraps over the art.
+        val compactBadge = maxWidth < 160.dp
         KidCard(
             onClick = null,
             modifier = Modifier.fillMaxSize(),
@@ -58,9 +61,11 @@ fun StickerImage(
         }
         if (isNew) {
             Text(
-                text = stringResource(R.string.sticker_new),
+                text = stringResource(if (compactBadge) R.string.sticker_new_short else R.string.sticker_new),
                 style = KidType.Small,
                 color = KidColors.Surface,
+                maxLines = 1,
+                softWrap = false,
                 modifier = Modifier
                     .align(Alignment.TopStart)
                     .offset(x = (-6).dp, y = (-10).dp)

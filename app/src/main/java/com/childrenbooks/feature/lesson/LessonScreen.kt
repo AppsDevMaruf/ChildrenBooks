@@ -9,6 +9,12 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.sizeIn
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -46,6 +52,8 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.text.style.LineHeightStyle
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
@@ -196,36 +204,68 @@ private fun LessonCardView(
         shape = KidShapes.Card,
         contentAlignment = Alignment.Center,
     ) {
-        Column(
+        // The glyph and word keep their size; the picture takes whatever height is left,
+        // so short screens shrink the picture instead of clipping the word.
+        BoxWithConstraints(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(20.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(12.dp, Alignment.CenterVertically),
         ) {
-            when (card) {
-                is LetterCard -> LetterContent(card, palette)
-                is CountCard -> CountContent(card, palette)
-                is PictureCard -> PictureContent(card, palette)
+            val fit = (maxHeight / CardDesignHeight).coerceIn(MinCardFit, 1f)
+            Column(
+                modifier = Modifier.fillMaxSize(),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(12.dp * fit, Alignment.CenterVertically),
+            ) {
+                when (card) {
+                    is LetterCard -> LetterContent(card, palette, fit)
+                    is CountCard -> CountContent(card, palette, fit)
+                    is PictureCard -> PictureContent(card, palette)
+                }
+                SpeakingIndicator(active = speaking, color = palette.accent)
             }
-            SpeakingIndicator(active = speaking, color = palette.accent)
         }
     }
 }
 
-/** Glyphs are a picture-like hero, so they are sized in dp and do not grow with font scale. */
+/** Height the card content is designed for; shorter cards scale the glyph down. */
+private val CardDesignHeight = 440.dp
+private const val MinCardFit = 0.6f
+private val GlyphSize = 108.dp
+private val PictureMax = 212.dp
+
+/**
+ * A big teaching glyph. Andika's line box is much taller than its letters, so the text sits
+ * in a fixed-height box sized to the ink (cap height + descender) and may overflow it.
+ */
 @Composable
-private fun glyphStyle(size: Dp) = KidType.Display.copy(
-    fontFamily = AndikaFamily,
-    fontSize = with(LocalDensity.current) { size.toSp() },
-    lineHeight = with(LocalDensity.current) { (size * 1.08f).toSp() },
-)
+private fun Glyph(text: String, size: Dp, color: Color) {
+    val density = LocalDensity.current
+    Box(Modifier.height(size), contentAlignment = Alignment.Center) {
+        Text(
+            text = text,
+            style = KidType.Display.copy(
+                fontFamily = AndikaFamily,
+                fontSize = with(density) { size.toSp() },
+                lineHeight = with(density) { size.toSp() },
+                lineHeightStyle = LineHeightStyle(
+                    alignment = LineHeightStyle.Alignment.Proportional,
+                    trim = LineHeightStyle.Trim.Both,
+                ),
+            ),
+            color = color,
+            maxLines = 1,
+            softWrap = false,
+            modifier = Modifier.wrapContentHeight(unbounded = true),
+        )
+    }
+}
 
 @Composable
-private fun LetterContent(card: LetterCard, palette: WorldPalette) {
-    Row(horizontalArrangement = Arrangement.spacedBy(22.dp), verticalAlignment = Alignment.Bottom) {
-        Text(card.upper, style = glyphStyle(108.dp), color = palette.accent)
-        Text(card.lower, style = glyphStyle(108.dp), color = palette.ink)
+private fun ColumnScope.LetterContent(card: LetterCard, palette: WorldPalette, fit: Float) {
+    Row(horizontalArrangement = Arrangement.spacedBy(22.dp), verticalAlignment = Alignment.CenterVertically) {
+        Glyph(card.upper, GlyphSize * fit, palette.accent)
+        Glyph(card.lower, GlyphSize * fit, palette.ink)
     }
     PictureCircle(card.image, palette)
     Text(
@@ -240,22 +280,24 @@ private fun LetterContent(card: LetterCard, palette: WorldPalette) {
         style = KidType.Word,
         color = KidColors.Ink,
         textAlign = TextAlign.Center,
+        maxLines = 2,
     )
 }
 
 @Composable
-private fun CountContent(card: CountCard, palette: WorldPalette) {
-    Text(card.numeral, style = glyphStyle(108.dp), color = palette.accent)
+private fun ColumnScope.CountContent(card: CountCard, palette: WorldPalette, fit: Float) {
+    Glyph(card.numeral, GlyphSize * fit, palette.accent)
     PictureCircle(card.image, palette)
-    Text(card.word, style = KidType.Word, color = KidColors.Ink, textAlign = TextAlign.Center)
+    Text(card.word, style = KidType.Word, color = KidColors.Ink, textAlign = TextAlign.Center, maxLines = 2)
 }
 
 @Composable
-private fun PictureContent(card: PictureCard, palette: WorldPalette) {
+private fun ColumnScope.PictureContent(card: PictureCard, palette: WorldPalette) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .height(280.dp)
+            .weight(1f, fill = false)
+            .heightIn(max = 300.dp)
             .background(palette.container, KidShapes.Tile),
         contentAlignment = Alignment.Center,
     ) {
@@ -268,15 +310,23 @@ private fun PictureContent(card: PictureCard, palette: WorldPalette) {
                 .padding(12.dp),
         )
     }
-    Spacer(Modifier.height(4.dp))
-    Text(card.word, style = KidType.Word.copy(fontSize = KidType.Word.fontSize * 1.2f), color = KidColors.Ink, textAlign = TextAlign.Center)
+    Text(
+        text = card.word,
+        style = KidType.Word.copy(fontSize = KidType.Word.fontSize * 1.2f),
+        color = KidColors.Ink,
+        textAlign = TextAlign.Center,
+        maxLines = 2,
+    )
 }
 
+/** Square picture on a tinted circle; up to 212 dp, smaller when the card is short. */
 @Composable
-private fun PictureCircle(image: Int, palette: WorldPalette) {
+private fun ColumnScope.PictureCircle(image: Int, palette: WorldPalette) {
     Box(
         modifier = Modifier
-            .size(212.dp)
+            .weight(1f, fill = false)
+            .sizeIn(maxWidth = PictureMax, maxHeight = PictureMax)
+            .aspectRatio(1f, matchHeightConstraintsFirst = true)
             .background(palette.container, CircleShape),
         contentAlignment = Alignment.Center,
     ) {
@@ -284,7 +334,7 @@ private fun PictureCircle(image: Int, palette: WorldPalette) {
             painter = painterResource(image),
             contentDescription = null,
             contentScale = ContentScale.Fit,
-            modifier = Modifier.size(176.dp),
+            modifier = Modifier.fillMaxSize(0.83f),
         )
     }
 }

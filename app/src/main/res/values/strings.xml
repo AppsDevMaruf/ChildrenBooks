@@ -234,6 +234,7 @@
     <string name="reward_next_set">Next: %1$s</string>
     <string name="reward_play_again">Play again</string>
     <string name="sticker_new">New sticker!</string>
+    <string name="sticker_new_short">New</string>
 
     <!-- Stickers -->
     <string name="stickers_title">My stickers</string>

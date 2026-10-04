@@ -1,5 +1,11 @@
 package com.childrenbooks.feature.listen
 
+import androidx.core.view.WindowCompat
+import androidx.compose.ui.platform.LocalView
+import androidx.compose.runtime.DisposableEffect
+import android.content.ContextWrapper
+import android.content.Context
+import android.app.Activity
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -168,6 +174,7 @@ fun ListenHomeRoute(
     viewModel: ListenViewModel = viewModel(factory = ListenViewModel.Factory),
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
+    DarkSystemBars(enabled = state.bedtime)
     val colors = state.colors
     LazyColumn(
         modifier = Modifier
@@ -203,6 +210,7 @@ fun ListenShelfRoute(
     viewModel: ListenViewModel = viewModel(factory = ListenViewModel.Factory),
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
+    DarkSystemBars(enabled = state.bedtime)
     val colors = state.colors
     val shelf = state.shelf ?: ListenShelf.AnimalSounds
     LazyColumn(
@@ -359,7 +367,7 @@ private fun ListenItemRow(item: ListenItem, playing: Boolean, colors: ListenColo
                     .clip(RoundedCornerShape(14.dp)),
             )
             Column(Modifier.weight(1f)) {
-                Text(item.title, style = KidType.Body, color = colors.text, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                Text(item.title, style = KidType.Body, color = colors.text, maxLines = 2, overflow = TextOverflow.Ellipsis)
                 Text(item.subtitle, style = KidType.Small, color = colors.muted, maxLines = 1, overflow = TextOverflow.Ellipsis)
             }
             Box(
@@ -377,4 +385,38 @@ private fun ListenItemRow(item: ListenItem, playing: Boolean, colors: ListenColo
             }
         }
     }
+}
+
+/**
+ * Bedtime is the only dark screen, so it switches the status and navigation bar icons to light
+ * while it is shown. Requests are counted because Listen and a shelf overlap during transitions.
+ */
+private object DarkBarsRequests {
+    var count = 0
+}
+
+@Composable
+private fun DarkSystemBars(enabled: Boolean) {
+    val view = LocalView.current
+    DisposableEffect(enabled, view) {
+        val window = view.context.findActivity()?.window
+        if (!enabled || window == null) return@DisposableEffect onDispose { }
+        val controller = WindowCompat.getInsetsController(window, view)
+        DarkBarsRequests.count++
+        controller.isAppearanceLightStatusBars = false
+        controller.isAppearanceLightNavigationBars = false
+        onDispose {
+            DarkBarsRequests.count = (DarkBarsRequests.count - 1).coerceAtLeast(0)
+            if (DarkBarsRequests.count == 0) {
+                controller.isAppearanceLightStatusBars = true
+                controller.isAppearanceLightNavigationBars = true
+            }
+        }
+    }
+}
+
+private tailrec fun Context.findActivity(): Activity? = when (this) {
+    is Activity -> this
+    is ContextWrapper -> baseContext.findActivity()
+    else -> null
 }
