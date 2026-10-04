@@ -8,10 +8,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.childrenbooks.R
 
-/** UI and headings. */
+/** UI and headings. Bundled (not a downloadable font) so it renders the same on every device. */
 val NunitoFamily = FontFamily(
-    Font(R.font.nunito, FontWeight.Normal),
+    Font(R.font.nunito_regular, FontWeight.Normal),
     Font(R.font.nunito_bold, FontWeight.Bold),
+    Font(R.font.nunito_extrabold, FontWeight.ExtraBold),
 )
 
 /**
