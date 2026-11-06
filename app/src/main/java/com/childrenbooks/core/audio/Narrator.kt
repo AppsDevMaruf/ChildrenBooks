@@ -28,13 +28,14 @@ interface Narrator {
 }
 
 /**
- * Plays recorded clips with [MediaPlayer] and spoken text with one tuned [TextToSpeech] profile,
- * so the voice no longer changes between screens. App-scoped: one engine for the whole app.
+ * Plays recorded clips with [MediaPlayer]. Spoken text plays its recorded baby-voice clip from
+ * [BabyVoice] when one exists, and otherwise one tuned [TextToSpeech] profile. App-scoped.
  */
 class AndroidNarrator(context: Context) : Narrator {
     private val appContext = context.applicationContext
     private val mainHandler = Handler(Looper.getMainLooper())
     private val queue = ArrayDeque<AudioClip>()
+    private val babyVoice = BabyVoice(appContext)
 
     private val _isSpeaking = MutableStateFlow(false)
     override val isSpeaking: StateFlow<Boolean> = _isSpeaking.asStateFlow()
@@ -121,6 +122,12 @@ class AndroidNarrator(context: Context) : Narrator {
     }
 
     private fun playSpoken(text: String) {
+        val recorded = babyVoice.clipsFor(text)
+        if (recorded != null) {
+            recorded.asReversed().forEach { queue.addFirst(AudioClip.Recorded(it)) }
+            playNext()
+            return
+        }
         val engine = tts
         when {
             engine == null || !_isVoiceAvailable.value -> playNext()

@@ -1,6 +1,8 @@
 package com.childrenbooks.data.content
 
 import android.content.res.Resources
+import androidx.annotation.RawRes
+import com.childrenbooks.core.audio.BabyVoice
 import com.childrenbooks.R
 import com.childrenbooks.data.local.LearningCatalog
 import com.childrenbooks.domain.model.LessonItem
@@ -105,7 +107,8 @@ class ContentRepository(private val resources: Resources) {
                 word = phrase.substringAfter(" is for ", phrase).trim(),
                 phrase = phrase,
                 image = lesson.exampleImage,
-                audio = AudioClip.Sequence(listOf(AudioClip.Recorded(lesson.letterSound), AudioClip.Recorded(lesson.wordSound))),
+                // The letter in the baby voice, then the app's own "A is for Apple" recording.
+                audio = AudioClip.Sequence(listOf(babyOr(lesson.letter, lesson.letterSound), AudioClip.Recorded(lesson.wordSound))),
             )
         }
         return SetChunker.balancedChunks(cards).mapIndexed { index, chunk ->
@@ -120,7 +123,8 @@ class ContentRepository(private val resources: Resources) {
                 numeral = lesson.number,
                 word = resources.getString(lesson.word),
                 image = lesson.countImage,
-                audio = AudioClip.Sequence(listOf(AudioClip.Recorded(lesson.numberSound), AudioClip.Recorded(lesson.wordSound))),
+                // The app's own number recording, then "O-N-E, one" in the baby voice.
+                audio = AudioClip.Sequence(listOf(AudioClip.Recorded(lesson.numberSound), babyOr(spelled(lesson), lesson.wordSound))),
             )
         }
         return SetChunker.balancedChunks(cards).mapIndexed { index, chunk ->
@@ -150,6 +154,16 @@ class ContentRepository(private val resources: Resources) {
         image = image,
         audio = AudioClip.Spoken(title),
     )
+
+    /** "O-N-E, one": the spelling, then the word (must match tools/baby_voice/manifest.py). */
+    private fun spelled(lesson: com.childrenbooks.domain.model.NumberLesson): String {
+        val word = resources.getString(lesson.word)
+        return word.uppercase().toList().joinToString("-") + ", " + word
+    }
+
+    /** The baby-voice clip for [text], or the app's older recording when there is none. */
+    private fun babyOr(text: String, @RawRes fallback: Int): AudioClip =
+        if (BabyVoice.hasClip(resources, text)) AudioClip.Spoken(text) else AudioClip.Recorded(fallback)
 
     private fun rangeTitle(first: String, last: String): String =
         if (first == last) first else resources.getString(R.string.set_range, first, last)

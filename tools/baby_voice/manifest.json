@@ -1,0 +1,1342 @@
+[
+ {
+  "group": "fixed",
+  "text": "Hello! Let's learn letters, numbers and words together.",
+  "file": "bv_148eb263"
+ },
+ {
+  "group": "fixed",
+  "text": "Who is learning today?",
+  "file": "bv_268c8793"
+ },
+ {
+  "group": "fixed",
+  "text": "Little learner. Ages three to five.",
+  "file": "bv_0ce5900a"
+ },
+ {
+  "group": "fixed",
+  "text": "Big learner. Ages six to eight.",
+  "file": "bv_f5176aed"
+ },
+ {
+  "group": "fixed",
+  "text": "How many?",
+  "file": "bv_4c01c607"
+ },
+ {
+  "group": "fixed",
+  "text": "Great job!",
+  "file": "bv_a9b394a0"
+ },
+ {
+  "group": "fixed",
+  "text": "Try again!",
+  "file": "bv_6ab3572c"
+ },
+ {
+  "group": "fixed",
+  "text": "Play a set to the end to win the next sticker!",
+  "file": "bv_d4eeff19"
+ },
+ {
+  "group": "fixed",
+  "text": "Letters",
+  "file": "bv_34e81d67"
+ },
+ {
+  "group": "fixed",
+  "text": "Numbers",
+  "file": "bv_b823f365"
+ },
+ {
+  "group": "fixed",
+  "text": "Time",
+  "file": "bv_cfa6377b"
+ },
+ {
+  "group": "fixed",
+  "text": "Colours",
+  "file": "bv_a895e145"
+ },
+ {
+  "group": "fixed",
+  "text": "Nature",
+  "file": "bv_b6748791"
+ },
+ {
+  "group": "fixed",
+  "text": "Food",
+  "file": "bv_740a86c9"
+ },
+ {
+  "group": "fixed",
+  "text": "Things",
+  "file": "bv_6848548b"
+ },
+ {
+  "group": "prefix",
+  "text": "Find the",
+  "file": "bv_a984b958"
+ },
+ {
+  "group": "prefix",
+  "text": "Look for the",
+  "file": "bv_7bdc1007"
+ },
+ {
+  "group": "prefix",
+  "text": "This is the",
+  "file": "bv_8ecd1c99"
+ },
+ {
+  "group": "prefix",
+  "text": "What starts with",
+  "file": "bv_f789dace"
+ },
+ {
+  "group": "word",
+  "text": "Donkey",
+  "file": "bv_9041fbce"
+ },
+ {
+  "group": "word",
+  "text": "Bear",
+  "file": "bv_9ca80c97"
+ },
+ {
+  "group": "word",
+  "text": "Camel",
+  "file": "bv_466aaf00"
+ },
+ {
+  "group": "word",
+  "text": "Kangaroo",
+  "file": "bv_ce7fa40d"
+ },
+ {
+  "group": "word",
+  "text": "Lion",
+  "file": "bv_ffeff301"
+ },
+ {
+  "group": "word",
+  "text": "Elephant",
+  "file": "bv_f233c6a0"
+ },
+ {
+  "group": "word",
+  "text": "Monkey",
+  "file": "bv_b74eaa06"
+ },
+ {
+  "group": "word",
+  "text": "Zebra",
+  "file": "bv_d49672b2"
+ },
+ {
+  "group": "word",
+  "text": "Tiger",
+  "file": "bv_a68674c8"
+ },
+ {
+  "group": "word",
+  "text": "Horse",
+  "file": "bv_a35b001c"
+ },
+ {
+  "group": "word",
+  "text": "Cow",
+  "file": "bv_a199797c"
+ },
+ {
+  "group": "word",
+  "text": "Goat",
+  "file": "bv_4f82dc46"
+ },
+ {
+  "group": "word",
+  "text": "Dog",
+  "file": "bv_b9617f9d"
+ },
+ {
+  "group": "word",
+  "text": "Cat",
+  "file": "bv_a6130548"
+ },
+ {
+  "group": "word",
+  "text": "Rabbit",
+  "file": "bv_6dfd13af"
+ },
+ {
+  "group": "word",
+  "text": "Deer",
+  "file": "bv_ddaf964f"
+ },
+ {
+  "group": "word",
+  "text": "Fox",
+  "file": "bv_37eda606"
+ },
+ {
+  "group": "word",
+  "text": "Giraffe",
+  "file": "bv_719607b6"
+ },
+ {
+  "group": "word",
+  "text": "Panda",
+  "file": "bv_04c6b1f7"
+ },
+ {
+  "group": "word",
+  "text": "Sheep",
+  "file": "bv_41907aff"
+ },
+ {
+  "group": "word",
+  "text": "Fish",
+  "file": "bv_9f46eb0d"
+ },
+ {
+  "group": "word",
+  "text": "Apple",
+  "file": "bv_68efff54"
+ },
+ {
+  "group": "word",
+  "text": "Banana",
+  "file": "bv_042762f9"
+ },
+ {
+  "group": "word",
+  "text": "Mango",
+  "file": "bv_50239c00"
+ },
+ {
+  "group": "word",
+  "text": "Grapes",
+  "file": "bv_26606f8a"
+ },
+ {
+  "group": "word",
+  "text": "Strawberry",
+  "file": "bv_45da66ef"
+ },
+ {
+  "group": "word",
+  "text": "Watermelon",
+  "file": "bv_20dc8dfc"
+ },
+ {
+  "group": "word",
+  "text": "Pineapple",
+  "file": "bv_b7436054"
+ },
+ {
+  "group": "word",
+  "text": "Carrot",
+  "file": "bv_bf1291f8"
+ },
+ {
+  "group": "word",
+  "text": "Tomato",
+  "file": "bv_2bb8452c"
+ },
+ {
+  "group": "word",
+  "text": "Potato",
+  "file": "bv_9d381f2f"
+ },
+ {
+  "group": "word",
+  "text": "Broccoli",
+  "file": "bv_c563424e"
+ },
+ {
+  "group": "word",
+  "text": "Burger",
+  "file": "bv_e84f5f3b"
+ },
+ {
+  "group": "word",
+  "text": "Pizza",
+  "file": "bv_0e1cad6b"
+ },
+ {
+  "group": "word",
+  "text": "Sandwich",
+  "file": "bv_71516a3e"
+ },
+ {
+  "group": "word",
+  "text": "Cake",
+  "file": "bv_5a21ae63"
+ },
+ {
+  "group": "word",
+  "text": "Ice Cream",
+  "file": "bv_cbe26498"
+ },
+ {
+  "group": "word",
+  "text": "Egg",
+  "file": "bv_707a9fa2"
+ },
+ {
+  "group": "word",
+  "text": "Milk",
+  "file": "bv_1c143328"
+ },
+ {
+  "group": "word",
+  "text": "Rice Bowl",
+  "file": "bv_0043ffb2"
+ },
+ {
+  "group": "word",
+  "text": "Rose",
+  "file": "bv_3a012bca"
+ },
+ {
+  "group": "word",
+  "text": "Sunflower",
+  "file": "bv_84faa128"
+ },
+ {
+  "group": "word",
+  "text": "Tulip",
+  "file": "bv_f2a75d2e"
+ },
+ {
+  "group": "word",
+  "text": "Lotus",
+  "file": "bv_f0d8c8b9"
+ },
+ {
+  "group": "word",
+  "text": "Daisy",
+  "file": "bv_82068af0"
+ },
+ {
+  "group": "word",
+  "text": "Lily",
+  "file": "bv_57112505"
+ },
+ {
+  "group": "word",
+  "text": "Orchid",
+  "file": "bv_5d691d6f"
+ },
+ {
+  "group": "word",
+  "text": "Hibiscus",
+  "file": "bv_f8356354"
+ },
+ {
+  "group": "word",
+  "text": "Marigold",
+  "file": "bv_4e5e34bf"
+ },
+ {
+  "group": "word",
+  "text": "Jasmine",
+  "file": "bv_4821bf26"
+ },
+ {
+  "group": "word",
+  "text": "Lavender",
+  "file": "bv_88de3545"
+ },
+ {
+  "group": "word",
+  "text": "Dahlia",
+  "file": "bv_b08cdbac"
+ },
+ {
+  "group": "word",
+  "text": "Peony",
+  "file": "bv_63e53c4b"
+ },
+ {
+  "group": "word",
+  "text": "Poppy",
+  "file": "bv_cf6307bd"
+ },
+ {
+  "group": "word",
+  "text": "Bluebell",
+  "file": "bv_1ace67bc"
+ },
+ {
+  "group": "word",
+  "text": "Magnolia",
+  "file": "bv_658aedfb"
+ },
+ {
+  "group": "word",
+  "text": "Cherry Blossom",
+  "file": "bv_b07de892"
+ },
+ {
+  "group": "word",
+  "text": "Daffodil",
+  "file": "bv_f14b43b1"
+ },
+ {
+  "group": "word",
+  "text": "Iris",
+  "file": "bv_ed1e84fd"
+ },
+ {
+  "group": "word",
+  "text": "Water Lily",
+  "file": "bv_f3b0e55f"
+ },
+ {
+  "group": "word",
+  "text": "Parrot",
+  "file": "bv_3a50e1cd"
+ },
+ {
+  "group": "word",
+  "text": "Peacock",
+  "file": "bv_bc7aa299"
+ },
+ {
+  "group": "word",
+  "text": "Owl",
+  "file": "bv_a0fdd1ad"
+ },
+ {
+  "group": "word",
+  "text": "Eagle",
+  "file": "bv_6ca3dc9b"
+ },
+ {
+  "group": "word",
+  "text": "Duck",
+  "file": "bv_f3b83a79"
+ },
+ {
+  "group": "word",
+  "text": "Chicken",
+  "file": "bv_479b8700"
+ },
+ {
+  "group": "word",
+  "text": "Penguin",
+  "file": "bv_2a7c98bc"
+ },
+ {
+  "group": "word",
+  "text": "Swan",
+  "file": "bv_7fae173c"
+ },
+ {
+  "group": "word",
+  "text": "Flamingo",
+  "file": "bv_971a829b"
+ },
+ {
+  "group": "word",
+  "text": "Sparrow",
+  "file": "bv_9a6638b6"
+ },
+ {
+  "group": "word",
+  "text": "Pigeon",
+  "file": "bv_89ec412e"
+ },
+ {
+  "group": "word",
+  "text": "Crow",
+  "file": "bv_d3940706"
+ },
+ {
+  "group": "word",
+  "text": "Kingfisher",
+  "file": "bv_2d20805f"
+ },
+ {
+  "group": "word",
+  "text": "Woodpecker",
+  "file": "bv_dcca67f1"
+ },
+ {
+  "group": "word",
+  "text": "Toucan",
+  "file": "bv_fd2338b0"
+ },
+ {
+  "group": "word",
+  "text": "Ostrich",
+  "file": "bv_2542aa38"
+ },
+ {
+  "group": "word",
+  "text": "Crane",
+  "file": "bv_97f4cf7a"
+ },
+ {
+  "group": "word",
+  "text": "Seagull",
+  "file": "bv_0abd8099"
+ },
+ {
+  "group": "word",
+  "text": "Turkey",
+  "file": "bv_a3089e51"
+ },
+ {
+  "group": "word",
+  "text": "Hummingbird",
+  "file": "bv_77936950"
+ },
+ {
+  "group": "word",
+  "text": "Chair",
+  "file": "bv_64c26b81"
+ },
+ {
+  "group": "word",
+  "text": "Table",
+  "file": "bv_37e8a042"
+ },
+ {
+  "group": "word",
+  "text": "Bed",
+  "file": "bv_de0aba1f"
+ },
+ {
+  "group": "word",
+  "text": "Sofa",
+  "file": "bv_b2656ea2"
+ },
+ {
+  "group": "word",
+  "text": "Wardrobe",
+  "file": "bv_d5f66758"
+ },
+ {
+  "group": "word",
+  "text": "Bookshelf",
+  "file": "bv_630ee253"
+ },
+ {
+  "group": "word",
+  "text": "Desk",
+  "file": "bv_a55c8b58"
+ },
+ {
+  "group": "word",
+  "text": "Lamp",
+  "file": "bv_39c5fd58"
+ },
+ {
+  "group": "word",
+  "text": "Stool",
+  "file": "bv_b826a3cb"
+ },
+ {
+  "group": "word",
+  "text": "Cabinet",
+  "file": "bv_83503c2c"
+ },
+ {
+  "group": "word",
+  "text": "Dresser",
+  "file": "bv_b3ac8c6a"
+ },
+ {
+  "group": "word",
+  "text": "Mirror",
+  "file": "bv_5c0b1e7c"
+ },
+ {
+  "group": "word",
+  "text": "Clock",
+  "file": "bv_7fba9196"
+ },
+ {
+  "group": "word",
+  "text": "Carpet",
+  "file": "bv_4679ad1c"
+ },
+ {
+  "group": "word",
+  "text": "Pillow",
+  "file": "bv_35575560"
+ },
+ {
+  "group": "word",
+  "text": "Blanket",
+  "file": "bv_4505a4c4"
+ },
+ {
+  "group": "word",
+  "text": "Cradle",
+  "file": "bv_83c82828"
+ },
+ {
+  "group": "word",
+  "text": "Rocking Chair",
+  "file": "bv_02a956c8"
+ },
+ {
+  "group": "word",
+  "text": "TV Stand",
+  "file": "bv_90bd3b41"
+ },
+ {
+  "group": "word",
+  "text": "Dining Table",
+  "file": "bv_21d173ea"
+ },
+ {
+  "group": "word",
+  "text": "Pear",
+  "file": "bv_66b89383"
+ },
+ {
+  "group": "word",
+  "text": "Cherry",
+  "file": "bv_fe118c0e"
+ },
+ {
+  "group": "word",
+  "text": "Peach",
+  "file": "bv_b6654ffe"
+ },
+ {
+  "group": "word",
+  "text": "Plum",
+  "file": "bv_cacf72ac"
+ },
+ {
+  "group": "word",
+  "text": "Lemon",
+  "file": "bv_5fb92620"
+ },
+ {
+  "group": "word",
+  "text": "Coconut",
+  "file": "bv_eb933961"
+ },
+ {
+  "group": "word",
+  "text": "Kiwi",
+  "file": "bv_7e47c642"
+ },
+ {
+  "group": "word",
+  "text": "Papaya",
+  "file": "bv_ff7c6553"
+ },
+ {
+  "group": "word",
+  "text": "Guava",
+  "file": "bv_7ad50d43"
+ },
+ {
+  "group": "word",
+  "text": "Pomegranate",
+  "file": "bv_4e3c7347"
+ },
+ {
+  "group": "word",
+  "text": "Avocado",
+  "file": "bv_05138463"
+ },
+ {
+  "group": "word",
+  "text": "Blueberry",
+  "file": "bv_fbefa670"
+ },
+ {
+  "group": "word",
+  "text": "Cucumber",
+  "file": "bv_e7ac48c2"
+ },
+ {
+  "group": "word",
+  "text": "Onion",
+  "file": "bv_c811732d"
+ },
+ {
+  "group": "word",
+  "text": "Garlic",
+  "file": "bv_e7b27fd5"
+ },
+ {
+  "group": "word",
+  "text": "Pumpkin",
+  "file": "bv_b57c01ab"
+ },
+ {
+  "group": "word",
+  "text": "Eggplant",
+  "file": "bv_329ea406"
+ },
+ {
+  "group": "word",
+  "text": "Corn",
+  "file": "bv_5c6df3f9"
+ },
+ {
+  "group": "word",
+  "text": "Cabbage",
+  "file": "bv_078bbe60"
+ },
+ {
+  "group": "word",
+  "text": "Cauliflower",
+  "file": "bv_2f43fb6d"
+ },
+ {
+  "group": "word",
+  "text": "Peas",
+  "file": "bv_11bfa315"
+ },
+ {
+  "group": "word",
+  "text": "Spinach",
+  "file": "bv_8f04c480"
+ },
+ {
+  "group": "word",
+  "text": "Lettuce",
+  "file": "bv_8fc32856"
+ },
+ {
+  "group": "word",
+  "text": "Bell Pepper",
+  "file": "bv_e4d097da"
+ },
+ {
+  "group": "word",
+  "text": "Chili",
+  "file": "bv_9dc30790"
+ },
+ {
+  "group": "word",
+  "text": "Mushroom",
+  "file": "bv_1ec53abd"
+ },
+ {
+  "group": "word",
+  "text": "Radish",
+  "file": "bv_e0ef0506"
+ },
+ {
+  "group": "word",
+  "text": "Beetroot",
+  "file": "bv_b4cf871a"
+ },
+ {
+  "group": "word",
+  "text": "Circle",
+  "file": "bv_d31b604f"
+ },
+ {
+  "group": "word",
+  "text": "Square",
+  "file": "bv_ca4f6d9f"
+ },
+ {
+  "group": "word",
+  "text": "Triangle",
+  "file": "bv_26e10fd1"
+ },
+ {
+  "group": "word",
+  "text": "Rectangle",
+  "file": "bv_cee8783a"
+ },
+ {
+  "group": "word",
+  "text": "Star",
+  "file": "bv_69e9f52a"
+ },
+ {
+  "group": "word",
+  "text": "Heart",
+  "file": "bv_a12dece2"
+ },
+ {
+  "group": "word",
+  "text": "Oval",
+  "file": "bv_8aadf400"
+ },
+ {
+  "group": "word",
+  "text": "Diamond",
+  "file": "bv_9de7ced0"
+ },
+ {
+  "group": "word",
+  "text": "Pentagon",
+  "file": "bv_514b113c"
+ },
+ {
+  "group": "word",
+  "text": "Hexagon",
+  "file": "bv_fd7ea773"
+ },
+ {
+  "group": "word",
+  "text": "Crescent",
+  "file": "bv_94157db9"
+ },
+ {
+  "group": "word",
+  "text": "Cube",
+  "file": "bv_90cc1e86"
+ },
+ {
+  "group": "word",
+  "text": "Cone",
+  "file": "bv_2dc8772c"
+ },
+ {
+  "group": "word",
+  "text": "Cylinder",
+  "file": "bv_627239bc"
+ },
+ {
+  "group": "word",
+  "text": "Sphere",
+  "file": "bv_525563b1"
+ },
+ {
+  "group": "word",
+  "text": "Pyramid",
+  "file": "bv_2cf364d5"
+ },
+ {
+  "group": "word",
+  "text": "Arrow",
+  "file": "bv_19f6c13a"
+ },
+ {
+  "group": "word",
+  "text": "Cross",
+  "file": "bv_96d23b3d"
+ },
+ {
+  "group": "word",
+  "text": "Semicircle",
+  "file": "bv_97e8e950"
+ },
+ {
+  "group": "word",
+  "text": "Trapezoid",
+  "file": "bv_e91a99de"
+ },
+ {
+  "group": "word",
+  "text": "Bee",
+  "file": "bv_a90d8a89"
+ },
+ {
+  "group": "word",
+  "text": "Drum",
+  "file": "bv_030c3c1e"
+ },
+ {
+  "group": "word",
+  "text": "Gloves",
+  "file": "bv_1de24de8"
+ },
+ {
+  "group": "word",
+  "text": "House",
+  "file": "bv_a6141699"
+ },
+ {
+  "group": "word",
+  "text": "Ice House",
+  "file": "bv_7448815a"
+ },
+ {
+  "group": "word",
+  "text": "Jar",
+  "file": "bv_40a19bf2"
+ },
+ {
+  "group": "word",
+  "text": "Key",
+  "file": "bv_b2dded49"
+ },
+ {
+  "group": "word",
+  "text": "Lock",
+  "file": "bv_27bd3430"
+ },
+ {
+  "group": "word",
+  "text": "Mug",
+  "file": "bv_069dbec9"
+ },
+ {
+  "group": "word",
+  "text": "Net",
+  "file": "bv_caa7531f"
+ },
+ {
+  "group": "word",
+  "text": "Queen",
+  "file": "bv_632c9bbe"
+ },
+ {
+  "group": "word",
+  "text": "Robot",
+  "file": "bv_19ea51e0"
+ },
+ {
+  "group": "word",
+  "text": "Snake",
+  "file": "bv_90ac449a"
+ },
+ {
+  "group": "word",
+  "text": "Umbrella",
+  "file": "bv_ea635200"
+ },
+ {
+  "group": "word",
+  "text": "Virus",
+  "file": "bv_fb6e64f4"
+ },
+ {
+  "group": "word",
+  "text": "Watch",
+  "file": "bv_91ca6522"
+ },
+ {
+  "group": "word",
+  "text": "Xylophone",
+  "file": "bv_ab4586a5"
+ },
+ {
+  "group": "word",
+  "text": "Yo Yo",
+  "file": "bv_1e5d61c6"
+ },
+ {
+  "group": "word",
+  "text": "ZIPPER",
+  "file": "bv_e6ee1a80"
+ },
+ {
+  "group": "listen",
+  "text": "Dog. Woof woof. The friendly dog says woof woof.",
+  "file": "bv_0954c72e"
+ },
+ {
+  "group": "listen",
+  "text": "Cat. Meow meow. The soft little cat says meow.",
+  "file": "bv_fc0dce68"
+ },
+ {
+  "group": "listen",
+  "text": "Cow. Moo moo. The big cow says moo.",
+  "file": "bv_309cf5ed"
+ },
+ {
+  "group": "listen",
+  "text": "Lion. Roar roar. The brave lion says roar.",
+  "file": "bv_a5e582eb"
+ },
+ {
+  "group": "listen",
+  "text": "Monkey. Oo oo aa aa. The funny monkey jumps and calls.",
+  "file": "bv_c6f596b0"
+ },
+ {
+  "group": "listen",
+  "text": "Horse. Neigh neigh. The happy horse says neigh.",
+  "file": "bv_9d8d63a8"
+ },
+ {
+  "group": "listen",
+  "text": "Sheep. Baa baa. The fluffy sheep says baa.",
+  "file": "bv_0d0c903c"
+ },
+ {
+  "group": "listen",
+  "text": "Duck. Quack quack. The duck swims and says quack.",
+  "file": "bv_07383113"
+ },
+ {
+  "group": "listen",
+  "text": "Bird. Tweet tweet. The little bird sings tweet tweet.",
+  "file": "bv_6e611061"
+ },
+ {
+  "group": "listen",
+  "text": "Elephant. Pawoo pawoo. The gentle elephant makes a trumpet sound.",
+  "file": "bv_8e23a4b8"
+ },
+ {
+  "group": "listen",
+  "text": "The kind bunny found one carrot. A hungry friend came by. Bunny smiled and shared the carrot. Both friends felt happy and full.",
+  "file": "bv_e776e8c2"
+ },
+ {
+  "group": "listen",
+  "text": "A little fish was scared to swim far. Then it saw a tiny bubble path. The fish followed slowly and found a beautiful coral garden.",
+  "file": "bv_37ca5ba0"
+ },
+ {
+  "group": "listen",
+  "text": "Mina opened a blue book. The pictures became bright and friendly. She learned letters, numbers, colors, and a happy song.",
+  "file": "bv_f89e73ae"
+ },
+ {
+  "group": "listen",
+  "text": "Panda saw toys on the floor. He picked them up one by one. The room became clean, and everyone clapped for helpful Panda.",
+  "file": "bv_a9ed9b63"
+ },
+ {
+  "group": "listen",
+  "text": "The children packed red apples, yellow bananas, and green grapes. After rain, a rainbow appeared. They named every color together.",
+  "file": "bv_b6632524"
+ },
+ {
+  "group": "listen",
+  "text": "Starry sky, soft and bright. Little dreams glow through the night. Close your eyes and smile with me. Happy hearts are wild and free.",
+  "file": "bv_baabdabd"
+ },
+ {
+  "group": "listen",
+  "text": "Apple red, apple sweet. Crunchy fruit is good to eat. One small bite and one big grin. Healthy habits now begin.",
+  "file": "bv_f89f2df2"
+ },
+ {
+  "group": "listen",
+  "text": "Little bunny hops around. Tiny feet tap on the ground. Hop hop here and hop hop there. Bunny dances everywhere.",
+  "file": "bv_d5695202"
+ },
+ {
+  "group": "listen",
+  "text": "Red and yellow, green and blue. Rainbow colors smile at you. Point and name them one by one. Learning colors is such fun.",
+  "file": "bv_6d11e277"
+ },
+ {
+  "group": "listen",
+  "text": "One step, two step, three and four. Tiny feet go to the door. Five steps, six steps, clap with me. Counting makes us bright and free.",
+  "file": "bv_683f5443"
+ },
+ {
+  "group": "listen",
+  "text": "Good morning sun, hello new day. Wash your face and start to play. Read a book and sing along. Morning time is bright and strong.",
+  "file": "bv_24c1b288"
+ },
+ {
+  "group": "listen",
+  "text": "Tiny fish in water blue. Swims around and waves to you. Bubble bubble, splash and glide. Happy fish goes side to side.",
+  "file": "bv_b10478be"
+ },
+ {
+  "group": "listen",
+  "text": "Busy bee goes buzz buzz buzz. Flying gently just because. Flower here and flower there. Sweet little bee is in the air.",
+  "file": "bv_bc4b6ef5"
+ },
+ {
+  "group": "listen",
+  "text": "Sleepy moon is shining high. Soft white clouds are drifting by. Teddy waits beside the bed. Sweet dreams dance inside your head.",
+  "file": "bv_3c6c3ee7"
+ },
+ {
+  "group": "listen",
+  "text": "Carrot orange, leafy green. Freshest garden ever seen. Water plants and watch them grow. Healthy foods help children glow.",
+  "file": "bv_4b7e3c38"
+ },
+ {
+  "group": "listen",
+  "text": "Friendly dog says woof woof woof. Wagging tail and tiny hoof. Run and fetch and sit down too. Doggy loves to play with you.",
+  "file": "bv_99b463a3"
+ },
+ {
+  "group": "listen",
+  "text": "Open book and turn the page. Stories sparkle on the stage. Words can fly and pictures sing. Reading is a magic thing.",
+  "file": "bv_17975a76"
+ },
+ {
+  "group": "listen",
+  "text": "Circle rolls and square stands still. Triangle climbs a tiny hill. Star shines bright and heart says hi. Shapes are dancing in the sky.",
+  "file": "bv_9a37b47b"
+ },
+ {
+  "group": "listen",
+  "text": "Raindrops tap on window glass. Little clouds are moving past. Boots go splash and umbrellas sway. We can smile on rainy day.",
+  "file": "bv_5ba560a4"
+ },
+ {
+  "group": "listen",
+  "text": "Flower smiles in morning light. Petals soft and colors bright. Bees come near and butterflies play. Garden friends say hello today.",
+  "file": "bv_8ce984fe"
+ },
+ {
+  "group": "listen",
+  "text": "Little train goes choo choo choo. Rolling past the hills so blue. Stop and wave, then start again. Learning rides the happy train.",
+  "file": "bv_3ca24eea"
+ },
+ {
+  "group": "listen",
+  "text": "Wash your hands with bubbly foam. Clean and fresh before you roam. Rub and rinse and dry them too. Healthy hands are good for you.",
+  "file": "bv_e575830d"
+ },
+ {
+  "group": "listen",
+  "text": "Kind words make a sunny day. Please and thank you light the way. Share a toy and help a friend. Happy hearts will never end.",
+  "file": "bv_3bd4be00"
+ },
+ {
+  "group": "listen",
+  "text": "Little bird sings tweet tweet tweet. Perched upon a branch so neat. Flap your wings and fly up high. Music floats across the sky.",
+  "file": "bv_d7a47596"
+ },
+ {
+  "group": "listen",
+  "text": "Good night toys and good night light. Good night moon so soft and bright. Close your eyes and rest your head. Dreams are waiting near your bed.",
+  "file": "bv_18809536"
+ },
+ {
+  "group": "letter",
+  "text": "A",
+  "file": "bv_d3d99e8b"
+ },
+ {
+  "group": "letter",
+  "text": "B",
+  "file": "bv_4ad0cf31"
+ },
+ {
+  "group": "letter",
+  "text": "C",
+  "file": "bv_3dd7ffa7"
+ },
+ {
+  "group": "letter",
+  "text": "D",
+  "file": "bv_a3b36a04"
+ },
+ {
+  "group": "letter",
+  "text": "E",
+  "file": "bv_d4b45a92"
+ },
+ {
+  "group": "letter",
+  "text": "F",
+  "file": "bv_4dbd0b28"
+ },
+ {
+  "group": "letter",
+  "text": "G",
+  "file": "bv_3aba3bbe"
+ },
+ {
+  "group": "letter",
+  "text": "H",
+  "file": "bv_aa05262f"
+ },
+ {
+  "group": "letter",
+  "text": "I",
+  "file": "bv_dd0216b9"
+ },
+ {
+  "group": "letter",
+  "text": "J",
+  "file": "bv_440b4703"
+ },
+ {
+  "group": "letter",
+  "text": "K",
+  "file": "bv_330c7795"
+ },
+ {
+  "group": "letter",
+  "text": "L",
+  "file": "bv_ad68e236"
+ },
+ {
+  "group": "letter",
+  "text": "M",
+  "file": "bv_da6fd2a0"
+ },
+ {
+  "group": "letter",
+  "text": "N",
+  "file": "bv_4366831a"
+ },
+ {
+  "group": "letter",
+  "text": "O",
+  "file": "bv_3461b38c"
+ },
+ {
+  "group": "letter",
+  "text": "P",
+  "file": "bv_b969be79"
+ },
+ {
+  "group": "letter",
+  "text": "Q",
+  "file": "bv_ce6e8eef"
+ },
+ {
+  "group": "letter",
+  "text": "R",
+  "file": "bv_5767df55"
+ },
+ {
+  "group": "letter",
+  "text": "S",
+  "file": "bv_2060efc3"
+ },
+ {
+  "group": "letter",
+  "text": "T",
+  "file": "bv_be047a60"
+ },
+ {
+  "group": "letter",
+  "text": "U",
+  "file": "bv_c9034af6"
+ },
+ {
+  "group": "letter",
+  "text": "V",
+  "file": "bv_500a1b4c"
+ },
+ {
+  "group": "letter",
+  "text": "W",
+  "file": "bv_270d2bda"
+ },
+ {
+  "group": "letter",
+  "text": "X",
+  "file": "bv_b7b2364b"
+ },
+ {
+  "group": "letter",
+  "text": "Y",
+  "file": "bv_c0b506dd"
+ },
+ {
+  "group": "letter",
+  "text": "Z",
+  "file": "bv_59bc5767"
+ },
+ {
+  "group": "spelling",
+  "text": "Z-E-R-O, zero",
+  "file": "bv_10222f2e"
+ },
+ {
+  "group": "spelling",
+  "text": "O-N-E, one",
+  "file": "bv_1343702b"
+ },
+ {
+  "group": "spelling",
+  "text": "T-W-O, two",
+  "file": "bv_65c40fc5"
+ },
+ {
+  "group": "spelling",
+  "text": "T-H-R-E-E, three",
+  "file": "bv_7ae45b84"
+ },
+ {
+  "group": "spelling",
+  "text": "F-O-U-R, four",
+  "file": "bv_85476fa3"
+ },
+ {
+  "group": "spelling",
+  "text": "F-I-V-E, five",
+  "file": "bv_5a7591d3"
+ },
+ {
+  "group": "spelling",
+  "text": "S-I-X, six",
+  "file": "bv_a227a91b"
+ },
+ {
+  "group": "spelling",
+  "text": "S-E-V-E-N, seven",
+  "file": "bv_be1a811a"
+ },
+ {
+  "group": "spelling",
+  "text": "E-I-G-H-T, eight",
+  "file": "bv_5e3fd367"
+ },
+ {
+  "group": "spelling",
+  "text": "N-I-N-E, nine",
+  "file": "bv_50c11261"
+ },
+ {
+  "group": "spelling",
+  "text": "T-E-N, ten",
+  "file": "bv_9ff5aa73"
+ },
+ {
+  "group": "spelling",
+  "text": "E-L-E-V-E-N, eleven",
+  "file": "bv_fd287b7e"
+ },
+ {
+  "group": "spelling",
+  "text": "T-W-E-L-V-E, twelve",
+  "file": "bv_987c78b1"
+ },
+ {
+  "group": "spelling",
+  "text": "T-H-I-R-T-E-E-N, thirteen",
+  "file": "bv_d990f638"
+ },
+ {
+  "group": "spelling",
+  "text": "F-O-U-R-T-E-E-N, fourteen",
+  "file": "bv_949ababc"
+ },
+ {
+  "group": "spelling",
+  "text": "F-I-F-T-E-E-N, fifteen",
+  "file": "bv_13458151"
+ },
+ {
+  "group": "spelling",
+  "text": "S-I-X-T-E-E-N, sixteen",
+  "file": "bv_2c83e8cb"
+ },
+ {
+  "group": "spelling",
+  "text": "S-E-V-E-N-T-E-E-N, seventeen",
+  "file": "bv_ad312c0e"
+ },
+ {
+  "group": "spelling",
+  "text": "E-I-G-H-T-E-E-N, eighteen",
+  "file": "bv_04db5310"
+ },
+ {
+  "group": "spelling",
+  "text": "N-I-N-E-T-E-E-N, nineteen",
+  "file": "bv_12cbe50c"
+ },
+ {
+  "group": "spelling",
+  "text": "T-W-E-N-T-Y, twenty",
+  "file": "bv_cf0b2ffd"
+ }
+]
