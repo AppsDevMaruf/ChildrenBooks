@@ -22,7 +22,7 @@ android {
     compileSdk = 37
     defaultConfig {
         applicationId = "com.childrenbooks"
-        minSdk = 23
+        minSdk = 24
         targetSdk = 37
         versionCode = 7
         versionName = "1.2.1"
