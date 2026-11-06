@@ -1,8 +1,10 @@
 package com.childrenbooks.ui
 
+import android.graphics.Color
 import android.os.Bundle
 import android.os.SystemClock
 import androidx.activity.ComponentActivity
+import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
@@ -45,7 +47,11 @@ class MainActivity : ComponentActivity() {
         val splash = installSplashScreen()
         super.onCreate(savedInstanceState)
         splash.setKeepOnScreenCondition { viewModel.startDestination.value == null }
-        enableEdgeToEdge()
+        // The app is always light, so keep dark status and navigation bar icons even when the phone is in dark mode.
+        enableEdgeToEdge(
+            statusBarStyle = SystemBarStyle.light(Color.TRANSPARENT, Color.TRANSPARENT),
+            navigationBarStyle = SystemBarStyle.light(Color.TRANSPARENT, Color.TRANSPARENT),
+        )
         setContent {
             ChildrenBooksTheme {
                 val start by viewModel.startDestination.collectAsStateWithLifecycle()
